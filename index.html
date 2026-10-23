@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Faiza Binte Zaman — CS Researcher & Machine Learning Scientist specializing in Explainable AI (XAI), Clinical Risk Stratification, and Deep Learning Medical Systems.">
+  <meta name="keywords" content="Faiza Binte Zaman, Machine Learning, Explainable AI, TreeSHAP, Deep Learning, Clinical AI, Cardiotocography, AIUB, ELITE Research Lab, AMIR Lab, Healthcare AI">
+  <meta name="author" content="Faiza Binte Zaman">
+  <title>Faiza Binte Zaman | CS Researcher &amp; ML Scientist</title>
+
+  <!-- Tab Icon / Favicon -->
+  <link rel="icon" type="image/jpeg" href="profile.jpg">
+  <link rel="apple-touch-icon" href="profile.jpg">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome & Academicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Tailwind CSS CDN configured for Midnight Velvet, Royal Blue & Velvet Cream with Dark/Light Support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          screens: {
+            'xs': '420px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px'
+          },
+          colors: {
+            midnight: {
+              950: '#0C1326', // Deep Dark Canvas
+              900: '#121C38', // Dark Surface Card
+              850: '#1A274E', // Elevated Dark Panel
+              800: '#253B74', // Core Midnight Velvet Accent
+              700: '#2E478C',
+              600: '#3A57A6'
+            },
+            royal: {
+              800: '#2D3E6B',
+              700: '#394E85',
+              600: '#46609C',
+              500: '#536DA8', // Core Royal Blue
+              400: '#6C85BE',
+              300: '#8FA4D4', // Soft Royal Highlight
+              200: '#B6C4E6',
+              100: '#DDE4F5'
+            },
+            cream: {
+              50: '#FFFFFF',
+              100: '#F4F5FB',
+              200: '#E8EAF7', // Core Velvet Cream
+              300: '#D6D9F0',
+              400: '#B8BDE0',
+              500: '#959BC6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Complete Self-Contained Styles -->
+  <style>
+    /* ==========================================================================
+       RESPONSIVE THEME SYSTEM:
+       Midnight Velvet: #253B74 | Royal Blue: #536DA8 | Velvet Cream: #E8EAF7
+       ========================================================================== */
+    html {
+      scroll-behavior: smooth;
+      text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+      overflow-x: clip;
+      width: 100%;
+      min-height: 100vh;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Dark Mode (Default) */
+    html.dark body {
+      background-color: #0C1326;
+      color: #E8EAF7;
+    }
+
+    /* Light Mode */
+    html:not(.dark) body {
+      background-color: #F8F9FD;
+      color: #171F38;
+    }
+
+    /* Subtle dot grid pattern */
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(83, 109, 168, 0.20) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    html:not(.dark) .bg-grid-pattern {
+      background-image: radial-gradient(rgba(83, 109, 168, 0.15) 1px, transparent 1px);
+    }
+
+    /* Card Surfaces */
+    .theme-card {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    html.dark .theme-card {
+      background-color: #121C38;
+      border: 1px solid #253B74;
+    }
+    html.dark .theme-card:hover {
+      border-color: #536DA8;
+      box-shadow: 0 16px 36px -12px rgba(37, 59, 116, 0.45);
+    }
+    html:not(.dark) .theme-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E2E6F2;
+      box-shadow: 0 4px 18px -4px rgba(37, 59, 116, 0.06);
+    }
+    html:not(.dark) .theme-card:hover {
+      border-color: #536DA8;
+      box-shadow: 0 16px 36px -12px rgba(83, 109, 168, 0.20);
+      transform: translateY(-2px);
+    }
+
+    /* Inner Inset Boxes */
+    .theme-inset {
+      transition: all 0.2s ease;
+    }
+    html.dark .theme-inset {
+      background-color: #0C1326;
+      border: 1px solid rgba(37, 59, 116, 0.8);
+    }
+    html:not(.dark) .theme-inset {
+      background-color: #F4F6FC;
+      border: 1px solid #E2E6F2;
+    }
+
+    /* Typography Colors */
+    html.dark .theme-text-primary { color: #E8EAF7; }
+    html.dark .theme-text-secondary { color: #D6D9F0; }
+    html.dark .theme-text-muted { color: #B8BDE0; }
+    html.dark .theme-text-accent { color: #8FA4D4; }
+
+    html:not(.dark) .theme-text-primary { color: #121A30; }
+    html:not(.dark) .theme-text-secondary { color: #37415F; }
+    html:not(.dark) .theme-text-muted { color: #66728F; }
+    html:not(.dark) .theme-text-accent { color: #253B74; }
+
+    /* Blinking Terminal Cursor */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .animate-blink {
+      animation: blink 1s infinite;
+    }
+
+    /* Publication Tabs */
+    .pub-tab {
+      transition: all 0.25s ease;
+      touch-action: manipulation;
+    }
+    html.dark .pub-tab {
+      background-color: #121C38;
+      color: #B8BDE0;
+      border: 1px solid rgba(83, 109, 168, 0.35);
+    }
+    html.dark .pub-tab:hover {
+      color: #E8EAF7;
+      border-color: #536DA8;
+      background-color: #1A274E;
+    }
+    html.dark .pub-tab.active {
+      background-color: #253B74;
+      color: #E8EAF7;
+      border-color: #536DA8;
+      box-shadow: 0 0 16px rgba(83, 109, 168, 0.35);
+    }
+
+    html:not(.dark) .pub-tab {
+      background-color: #FFFFFF;
+      color: #5A6684;
+      border: 1px solid #DCE2F0;
+    }
+    html:not(.dark) .pub-tab:hover {
+      color: #121A30;
+      border-color: #536DA8;
+      background-color: #F0F4FC;
+    }
+    html:not(.dark) .pub-tab.active {
+      background-color: #253B74;
+      color: #FFFFFF;
+      border-color: #253B74;
+      box-shadow: 0 4px 14px rgba(37, 59, 116, 0.25);
+    }
+
+    /* Hide Scrollbar for Horizontal Touch Sliders */
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Desktop Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0C1326;
+    }
+    html:not(.dark) ::-webkit-scrollbar-track {
+      background: #EDF1FA;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #253B74;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #536DA8;
+    }
+
+    /* Selection Highlight */
+    ::selection {
+      background-color: #253B74;
+      color: #E8EAF7;
+    }
+
+    /* Mobile Touch Optimization */
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ==========================================================================
+       OVERLAPPING STACKING CARDS ARCHITECTURE
+       Midnight Velvet: #253B74 | Royal Blue: #536DA8 | Velvet Cream: #E8EAF7
+       ========================================================================== */
+    .stack-card-deck {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    .stack-card {
+      position: sticky;
+      top: calc(4.75rem + var(--stack-offset, 0px));
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+      will-change: transform;
+    }
+
+    @media (max-width: 640px) {
+      .stack-card-deck {
+        gap: 1.75rem;
+      }
+      .stack-card {
+        top: calc(4.25rem + var(--stack-offset-mob, 0px));
+      }
+    }
+
+    /* Elevated Dark/Light Shadows for Depth Layering */
+    html.dark .stack-card {
+      background-color: #121C38;
+      border: 1px solid rgba(83, 109, 168, 0.45);
+      box-shadow: 0 -6px 28px -4px rgba(12, 19, 38, 0.95), 0 25px 50px -12px rgba(12, 19, 38, 0.98);
+    }
+
+    html.dark .stack-card:hover {
+      border-color: #8FA4D4;
+      box-shadow: 0 -8px 32px 0 rgba(37, 59, 116, 0.6), 0 30px 60px -12px rgba(12, 19, 38, 1);
+    }
+
+    html:not(.dark) .stack-card {
+      background-color: #FFFFFF;
+      border: 1px solid #DCE2F0;
+      box-shadow: 0 -4px 20px -2px rgba(37, 59, 116, 0.08), 0 20px 40px -10px rgba(37, 59, 116, 0.16);
+    }
+
+    html:not(.dark) .stack-card:hover {
+      border-color: #536DA8;
+      box-shadow: 0 -6px 24px -2px rgba(37, 59, 116, 0.14), 0 24px 48px -10px rgba(83, 109, 168, 0.26);
+    }
+
+    /* Project View Mode Switch Buttons */
+    .proj-view-btn {
+      transition: all 0.25s ease;
+      touch-action: manipulation;
+    }
+    html.dark .proj-view-btn {
+      background-color: #121C38;
+      color: #B8BDE0;
+      border: 1px solid rgba(83, 109, 168, 0.35);
+    }
+    html.dark .proj-view-btn:hover {
+      color: #E8EAF7;
+      border-color: #536DA8;
+      background-color: #1A274E;
+    }
+    html.dark .proj-view-btn.active {
+      background-color: #253B74;
+      color: #E8EAF7;
+      border-color: #536DA8;
+      box-shadow: 0 0 16px rgba(83, 109, 168, 0.35);
+    }
+    html:not(.dark) .proj-view-btn {
+      background-color: #FFFFFF;
+      color: #5A6684;
+      border: 1px solid #DCE2F0;
+    }
+    html:not(.dark) .proj-view-btn:hover {
+      color: #121A30;
+      border-color: #536DA8;
+      background-color: #F0F4FC;
+    }
+    html:not(.dark) .proj-view-btn.active {
+      background-color: #253B74;
+      color: #FFFFFF;
+      border-color: #253B74;
+      box-shadow: 0 4px 14px rgba(37, 59, 116, 0.25);
+    }
+
+    /* ==========================================================================
+       PUBLICATION OVERLAPPING STACKING CARDS
+       ========================================================================== */
+    .pub-stack-deck {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    .pub-stack-card {
+      position: sticky;
+      top: calc(4.75rem + var(--pub-stack-offset, 0px));
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+      will-change: transform;
+    }
+
+    @media (max-width: 640px) {
+      .pub-stack-deck {
+        gap: 1.75rem;
+      }
+      .pub-stack-card {
+        top: calc(4.25rem + var(--pub-stack-offset-mob, 0px));
+      }
+    }
+
+    /* Elevated Dark/Light Shadows for Publication Stacking */
+    html.dark .pub-stack-card {
+      background-color: #121C38;
+      border: 1px solid rgba(83, 109, 168, 0.45);
+      box-shadow: 0 -6px 28px -4px rgba(12, 19, 38, 0.95), 0 25px 50px -12px rgba(12, 19, 38, 0.98);
+    }
+
+    html.dark .pub-stack-card:hover {
+      border-color: #8FA4D4;
+      box-shadow: 0 -8px 32px 0 rgba(37, 59, 116, 0.6), 0 30px 60px -12px rgba(12, 19, 38, 1);
+    }
+
+    html:not(.dark) .pub-stack-card {
+      background-color: #FFFFFF;
+      border: 1px solid #DCE2F0;
+      box-shadow: 0 -4px 20px -2px rgba(37, 59, 116, 0.08), 0 20px 40px -10px rgba(37, 59, 116, 0.16);
+    }
+
+    html:not(.dark) .pub-stack-card:hover {
+      border-color: #536DA8;
+      box-shadow: 0 -6px 24px -2px rgba(37, 59, 116, 0.14), 0 24px 48px -10px rgba(83, 109, 168, 0.26);
+    }
+
+    /* Publication View Mode Switch Buttons */
+    .pub-view-btn {
+      transition: all 0.25s ease;
+      touch-action: manipulation;
+    }
+    html.dark .pub-view-btn {
+      background-color: #121C38;
+      color: #B8BDE0;
+      border: 1px solid rgba(83, 109, 168, 0.35);
+    }
+    html.dark .pub-view-btn:hover {
+      color: #E8EAF7;
+      border-color: #536DA8;
+      background-color: #1A274E;
+    }
+    html.dark .pub-view-btn.active {
+      background-color: #253B74;
+      color: #E8EAF7;
+      border-color: #536DA8;
+      box-shadow: 0 0 16px rgba(83, 109, 168, 0.35);
+    }
+    html:not(.dark) .pub-view-btn {
+      background-color: #FFFFFF;
+      color: #5A6684;
+      border: 1px solid #DCE2F0;
+    }
+    html:not(.dark) .pub-view-btn:hover {
+      color: #121A30;
+      border-color: #536DA8;
+      background-color: #F0F4FC;
+    }
+    html:not(.dark) .pub-view-btn.active {
+      background-color: #253B74;
+      color: #FFFFFF;
+      border-color: #253B74;
+      box-shadow: 0 4px 14px rgba(37, 59, 116, 0.25);
+    }
+
+    /* Print Formatting */
+    @media print {
+      header, footer, #pub-filters, #pub-search-input, .proj-view-btn, .pub-view-btn, #cite-modal, #theme-toggle {
+        display: none !important;
+      }
+      .stack-card, .pub-stack-card {
+        position: static !important;
+        margin-bottom: 1.5rem !important;
+        box-shadow: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .theme-card, .theme-inset {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#253B74] selection:text-[#E8EAF7]">
+
+  <!-- Subtle Royal Blue Dot Grid Background -->
+  <div class="fixed inset-0 pointer-events-none z-0 bg-grid-pattern opacity-40"></div>
+
+  <!-- STICKY TOP NAVIGATION BAR (Fully Responsive) -->
+  <header class="sticky top-0 z-50 transition-colors backdrop-blur-md border-b shadow-lg dark:bg-[#0C1326]/95 dark:border-[#253B74]/60 dark:shadow-[#0C1326]/60 bg-white/95 border-[#E2E6F2] shadow-slate-200/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+      
+      <!-- Brand Identity with Portrait Thumbnail -->
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group min-w-0">
+        <div class="relative w-9 h-9 rounded-lg overflow-hidden border border-[#536DA8]/60 group-hover:border-[#8FA4D4] transition shadow-sm flex-shrink-0 bg-[#253B74]">
+          <img src="profile.jpg" alt="Faiza Binte Zaman" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'text-xs font-mono font-bold text-white flex items-center justify-center h-full\'>FZ</span>';">
+        </div>
+        <div class="min-w-0">
+          <div class="font-bold text-xs sm:text-sm tracking-tight leading-none group-hover:text-[#8FA4D4] transition theme-text-primary truncate">Faiza Binte Zaman</div>
+          <div class="text-[10px] sm:text-[11px] font-mono mt-1 text-[#536DA8] dark:text-[#8FA4D4] truncate">CS Researcher &amp; ML Scientist</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (>= md) -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-xs font-medium theme-text-muted">
+        <a href="#about" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition">About</a>
+        <a href="#publications" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition">Publications</a>
+        <a href="#engineering" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition">Research Systems</a>
+        <a href="#skills" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition">Skills</a>
+        <a href="#journey" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition">Journey</a>
+        <a href="#education" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition">Education</a>
+        <a href="#contact" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition">Contact</a>
+      </nav>
+
+      <!-- Right Action Pill Buttons: Light/Dark Toggle & CV Download -->
+      <div class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Theme" class="w-9 h-9 rounded-lg border flex items-center justify-center transition shadow-sm dark:bg-[#1A274E] dark:border-[#536DA8]/40 dark:text-[#E8EAF7] bg-[#F0F3FA] border-[#DCE2F0] text-[#253B74] hover:border-[#536DA8]">
+          <i id="theme-toggle-icon" class="fa-solid fa-moon text-sm"></i>
+        </button>
+
+        <!-- Academic CV Download Button -->
+        <a href="Faiza_CV_CHRF.pdf" target="_blank" class="px-2.5 sm:px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 sm:gap-2 transition shadow-sm bg-[#253B74] hover:bg-[#536DA8] text-[#E8EAF7] border border-[#536DA8]/50" title="Download Academic CV (PDF)">
+          <i class="fa-regular fa-file-pdf"></i>
+          <span class="hidden sm:inline">Academic CV</span>
+          <span class="sm:hidden font-mono">CV</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle (< lg) -->
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="w-9 h-9 rounded-lg border lg:hidden flex items-center justify-center dark:bg-[#1A274E] dark:border-[#536DA8]/40 dark:text-[#B8BDE0] bg-[#F0F3FA] border-[#DCE2F0] text-[#253B74]">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b px-4 sm:px-6 py-4 space-y-3 text-xs font-medium dark:bg-[#121C38] dark:border-[#253B74] bg-white border-[#E2E6F2] shadow-xl">
+      <div class="grid grid-cols-2 gap-2">
+        <a href="#about" class="p-2.5 rounded-lg theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] flex items-center gap-2">
+          <i class="fa-solid fa-user text-[#536DA8]"></i>
+          <span>About Me</span>
+        </a>
+        <a href="#publications" class="p-2.5 rounded-lg theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] flex items-center gap-2">
+          <i class="fa-solid fa-book-bookmark text-[#536DA8]"></i>
+          <span>Papers (10)</span>
+        </a>
+        <a href="#engineering" class="p-2.5 rounded-lg theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] flex items-center gap-2">
+          <i class="fa-solid fa-microchip text-[#536DA8]"></i>
+          <span>Systems (8)</span>
+        </a>
+        <a href="#skills" class="p-2.5 rounded-lg theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] flex items-center gap-2">
+          <i class="fa-solid fa-code text-[#536DA8]"></i>
+          <span>Skills</span>
+        </a>
+        <a href="#journey" class="p-2.5 rounded-lg theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] flex items-center gap-2">
+          <i class="fa-solid fa-briefcase text-[#536DA8]"></i>
+          <span>Journey</span>
+        </a>
+        <a href="#education" class="p-2.5 rounded-lg theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] flex items-center gap-2">
+          <i class="fa-solid fa-graduation-cap text-[#536DA8]"></i>
+          <span>Education</span>
+        </a>
+      </div>
+      <div class="pt-2 border-t dark:border-[#253B74]/80 border-[#E2E6F2] flex items-center justify-between gap-3">
+        <a href="#contact" class="flex-1 py-2 rounded-lg text-center font-semibold theme-inset text-[#536DA8] dark:text-[#8FA4D4]">
+          <i class="fa-regular fa-envelope mr-1.5"></i> Contact Me
+        </a>
+        <a href="Faiza_CV_CHRF.pdf" target="_blank" class="flex-1 py-2 rounded-lg text-center font-semibold bg-[#253B74] text-[#E8EAF7]">
+          <i class="fa-solid fa-download mr-1.5"></i> Full CV (PDF)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN VIEWPORT CONTAINER (Mobile-First Spacing) -->
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 space-y-16 sm:space-y-20 md:space-y-24 py-8 sm:py-10 md:py-14">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="pt-2 sm:pt-4 md:pt-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+        <!-- Left Column: Identity, Typewriter, Bio & Outlined Metrics -->
+        <div class="lg:col-span-7 space-y-4 sm:space-y-5">
+          <!-- Availability Pill -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full theme-inset text-xs font-medium shadow-sm max-w-full">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+            <span class="theme-text-primary text-[11px] sm:text-xs truncate">Open to Research Collaborations, Fellowships &amp; ML Roles</span>
+          </div>
+
+          <!-- Display Name -->
+          <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-[54px] font-extrabold tracking-tight leading-none theme-text-primary break-words">
+            Faiza Binte Zaman
+          </h1>
+
+          <!-- Specialization Tagline -->
+          <div class="text-xs sm:text-sm md:text-base font-semibold tracking-wide text-[#536DA8] dark:text-[#8FA4D4] leading-snug">
+            Explainable AI (XAI) &middot; Clinical Machine Learning &middot; Deep Learning Systems
+          </div>
+
+          <!-- Terminal Typewriter Line -->
+          <div class="font-mono text-[11px] sm:text-xs md:text-sm flex items-center gap-2 h-8 px-3 rounded-lg max-w-xl theme-inset overflow-hidden">
+            <span class="text-[#536DA8] dark:text-[#8FA4D4] font-bold flex-shrink-0">&gt;_</span>
+            <span id="typewriter-text" class="theme-text-primary truncate">Investigating explainable clinical risk stratification</span>
+            <span class="w-1.5 h-4 bg-[#536DA8] inline-block animate-blink flex-shrink-0"></span>
+          </div>
+
+          <!-- Narrative Bio Paragraph -->
+          <p class="text-xs sm:text-sm md:text-[15px] leading-relaxed max-w-2xl theme-text-secondary">
+            Computer Science &amp; Engineering graduate (<strong class="font-semibold theme-text-primary">3.89 CGPA</strong>, 4x Dean's List Honors) and current M.Sc. in Computer Science researcher at <strong class="theme-text-primary">AIUB</strong>. Currently serving as a Research Assistant at <strong class="theme-text-primary">ELITE Research Lab LLC</strong> (Queens, NY) and former Research Intern at <strong class="theme-text-primary">AMIR Lab</strong> (Jan 2026 – June 2026). My work focuses on interpretable biomedical machine learning, histopathological vision architectures, and calibrated clinical decision triage.
+          </p>
+
+          <!-- Outlined Stat Badges (Responsive 2x2 on Mobile, 4x1 on Tablet/Desktop) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1">
+            <div class="p-3 rounded-lg text-center sm:text-left theme-inset shadow-sm">
+              <strong id="stat-pub-count" class="font-bold text-base sm:text-lg theme-text-primary block">10</strong>
+              <span class="theme-text-muted text-[10px] sm:text-xs">Papers &amp; Preprints</span>
+            </div>
+            <div class="p-3 rounded-lg text-center sm:text-left theme-inset shadow-sm">
+              <strong class="font-bold text-base sm:text-lg theme-text-primary block">3.89</strong>
+              <span class="theme-text-muted text-[10px] sm:text-xs">B.Sc. CGPA (Top Tier)</span>
+            </div>
+            <div class="p-3 rounded-lg text-center sm:text-left theme-inset shadow-sm">
+              <strong class="font-bold text-base sm:text-lg text-[#536DA8] dark:text-[#8FA4D4] block">3.80</strong>
+              <span class="theme-text-muted text-[10px] sm:text-xs">M.Sc. Ongoing</span>
+            </div>
+            <div class="p-3 rounded-lg text-center sm:text-left theme-inset shadow-sm">
+              <strong class="text-emerald-500 dark:text-emerald-400 font-bold text-base sm:text-lg block">8+</strong>
+              <span class="theme-text-muted text-[10px] sm:text-xs">ML Pipelines</span>
+            </div>
+          </div>
+
+          <!-- Primary Call-to-Action Buttons (Responsive Full Width on Mobile) -->
+          <div class="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-3">
+            <a href="#engineering" class="px-5 py-2.5 rounded-lg bg-[#253B74] hover:bg-[#536DA8] text-[#E8EAF7] border border-[#536DA8]/50 font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#253B74]/30 transition text-center">
+              <span>Explore Research Work</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#publications" class="px-5 py-2.5 rounded-lg font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition theme-inset theme-text-primary hover:border-[#536DA8] text-center">
+              <i class="fa-regular fa-file-lines text-[#536DA8] dark:text-[#8FA4D4]"></i>
+              <span id="hero-pub-btn-text">View Publications (10)</span>
+            </a>
+            <a href="#contact" class="px-4 py-2.5 rounded-lg font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition theme-inset theme-text-primary hover:border-[#536DA8] text-center">
+              <i class="fa-regular fa-envelope text-[#536DA8] dark:text-[#8FA4D4]"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <!-- Social and Academic Profiles Bar -->
+          <div class="pt-2 flex flex-wrap items-center gap-2.5 text-xs theme-text-muted font-mono">
+            <span class="text-[11px] hidden xs:inline">Profiles:</span>
+            <a href="https://github.com/wahida-binte" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="w-8 h-8 rounded-lg flex items-center justify-center transition theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] hover:border-[#536DA8]">
+              <i class="fa-brands fa-github text-sm"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=NuWTmywAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile" class="w-8 h-8 rounded-lg flex items-center justify-center transition theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] hover:border-[#536DA8]">
+              <i class="ai ai-google-scholar text-sm"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-8 h-8 rounded-lg flex items-center justify-center transition theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] hover:border-[#536DA8]">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a>
+            <a href="mailto:faizabintezaman@gmail.com" aria-label="Email Faiza Binte Zaman" class="w-8 h-8 rounded-lg flex items-center justify-center transition theme-inset theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] hover:border-[#536DA8]">
+              <i class="fa-regular fa-envelope text-sm"></i>
+            </a>
+            <button class="copy-email-btn px-2.5 py-1.5 rounded-lg text-[11px] font-mono flex items-center gap-1.5 transition theme-inset theme-text-primary hover:border-[#536DA8]">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Professional Researcher Profile Card (Fully Responsive) -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl p-5 sm:p-7 shadow-2xl space-y-4 sm:space-y-5 theme-card">
+
+            <!-- Card Header: Profile Photo & Verified Status -->
+            <div class="flex items-center sm:items-start gap-3.5 sm:gap-4">
+              <div class="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden border-2 border-[#536DA8]/50 shadow-xl flex-shrink-0 bg-[#253B74]">
+                <img src="profile.jpg" alt="Faiza Binte Zaman" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'text-2xl font-mono font-bold text-white flex items-center justify-center h-full\'>FZ</span>';">
+                <div class="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-[#121C38]" title="Active in Research"></div>
+              </div>
+              <div class="space-y-1 min-w-0">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#253B74] text-[#E8EAF7] text-[10px] font-mono font-semibold uppercase">
+                  <i class="fa-solid fa-graduation-cap text-[9px] text-[#8FA4D4]"></i> CS Researcher
+                </div>
+                <h3 class="text-base sm:text-lg md:text-xl font-bold tracking-tight theme-text-primary truncate">Faiza Binte Zaman</h3>
+                <p class="text-xs font-mono theme-text-secondary truncate">M.Sc. in CS (AIUB)</p>
+                <p class="text-xs font-mono text-[#536DA8] dark:text-[#8FA4D4] truncate">RA @ ELITE Research Lab LLC</p>
+              </div>
+            </div>
+
+            <!-- Current & Former Research Appointments -->
+            <div class="space-y-2 border-t pt-3 sm:pt-4 text-xs font-mono dark:border-[#253B74]/80 border-[#E2E6F2]">
+              <div class="text-[10px] uppercase tracking-wider theme-text-muted font-semibold">Research Appointments:</div>
+              <div class="space-y-1.5 theme-text-primary">
+                <div class="flex items-center justify-between p-2 sm:p-2.5 rounded-lg theme-inset gap-2">
+                  <span class="flex items-center gap-2 truncate"><i class="fa-solid fa-layer-group text-[#536DA8] dark:text-[#8FA4D4] flex-shrink-0"></i> <span class="truncate">ELITE Research Lab (USA)</span></span>
+                  <span class="text-[10px] text-emerald-600 dark:text-emerald-300 font-bold px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 whitespace-nowrap">RA</span>
+                </div>
+                <div class="flex items-center justify-between p-2 sm:p-2.5 rounded-lg theme-inset gap-2">
+                  <span class="flex items-center gap-2 truncate"><i class="fa-solid fa-building-columns text-[#536DA8] dark:text-[#8FA4D4] flex-shrink-0"></i> <span class="truncate">AIUB Dept of CS</span></span>
+                  <span class="text-[10px] theme-text-muted font-medium px-2 py-0.5 rounded theme-inset whitespace-nowrap">M.Sc. Scholar</span>
+                </div>
+                <div class="flex items-center justify-between p-2 sm:p-2.5 rounded-lg theme-inset gap-2">
+                  <span class="flex items-center gap-2 truncate"><i class="fa-solid fa-brain text-[#536DA8] dark:text-[#8FA4D4] flex-shrink-0"></i> <span class="truncate">AMIR Lab</span></span>
+                  <span class="text-[10px] theme-text-muted font-medium px-2 py-0.5 rounded theme-inset whitespace-nowrap">Jan – Jun 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Academic Distinctions Grid -->
+            <div class="grid grid-cols-2 gap-2.5 pt-1 text-center font-mono text-xs">
+              <div class="p-2.5 sm:p-3 rounded-xl theme-inset">
+                <div class="text-sm sm:text-base md:text-lg font-bold theme-text-primary">3.89 / 4.00</div>
+                <div class="text-[10px] theme-text-muted mt-0.5">B.Sc. CSE (4x Honors)</div>
+              </div>
+              <div class="p-2.5 sm:p-3 rounded-xl theme-inset">
+                <div class="text-sm sm:text-base md:text-lg font-bold text-emerald-500 dark:text-emerald-300">10 Papers</div>
+                <div id="hero-pub-breakdown" class="text-[10px] theme-text-muted mt-0.5">7 Accepted &middot; 3 Review</div>
+              </div>
+            </div>
+
+            <!-- Core Research Focus Areas -->
+            <div class="space-y-2 border-t pt-3 sm:pt-4 dark:border-[#253B74]/80 border-[#E2E6F2]">
+              <div class="text-[10px] font-mono uppercase tracking-wider theme-text-muted font-semibold">Core Focus Areas:</div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-mono theme-inset text-[#536DA8] dark:text-[#8FA4D4]">Explainable AI</span>
+                <span class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-mono theme-inset theme-text-primary">Clinical Triage</span>
+                <span class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-mono theme-inset text-[#536DA8] dark:text-[#8FA4D4]">Medical Vision</span>
+                <span class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-mono theme-inset theme-text-primary">Edge AI</span>
+              </div>
+            </div>
+
+            <!-- Bottom Action Footer -->
+            <div class="pt-2 sm:pt-3 border-t flex items-center justify-between text-xs font-mono dark:border-[#253B74]/80 border-[#E2E6F2]">
+              <span class="theme-text-muted flex items-center gap-1.5 text-[11px] sm:text-xs"><i class="fa-solid fa-location-dot text-[#536DA8] dark:text-[#8FA4D4]"></i> Dhaka, BD</span>
+              <a href="Faiza_CV_CHRF.pdf" target="_blank" class="text-[#536DA8] dark:text-[#8FA4D4] hover:underline font-semibold flex items-center gap-1.5 transition text-[11px] sm:text-xs">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span>Academic CV</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="space-y-6">
+      <div>
+        <div class="text-[11px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#536DA8]"></span> BACKGROUND &amp; PHILOSOPHY
+        </div>
+        <h2 class="mt-1 text-2xl sm:text-3xl font-extrabold tracking-tight theme-text-primary">About My Research &amp; Vision</h2>
+        <p class="text-xs sm:text-sm theme-text-muted mt-0.5">Bridging interpretable machine learning with actionable clinical triage and edge diagnostics</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
+        <!-- Story Card -->
+        <div class="lg:col-span-7 rounded-2xl p-5 sm:p-7 space-y-4 theme-card">
+          <h3 class="text-base sm:text-lg font-bold tracking-tight theme-text-primary flex items-center gap-2">
+            <i class="fa-solid fa-compass text-[#536DA8]"></i>
+            <span>My Story &amp; Objective</span>
+          </h3>
+          <p class="text-xs sm:text-sm leading-relaxed theme-text-secondary">
+            As a computer science researcher, I am driven by the imperative that life-critical artificial intelligence must never remain an uninterpretable black box. During my undergraduate studies at AIUB—where I achieved a <strong class="theme-text-primary">3.89 CGPA</strong> and four consecutive Dean's List honors—I focused on translating complex gradient boosted trees and hybrid neural architectures into transparent, clinical-grade decision tools.
+          </p>
+          <p class="text-xs sm:text-sm leading-relaxed theme-text-secondary">
+            At <strong class="theme-text-primary">ELITE Research Lab LLC</strong>, I lead experimental benchmarks on cardiological triage classifiers and multi-tier TreeSHAP attribution audits for peer-reviewed venues. My research contributions span 10 academic papers across IEEE and Springer, focusing on Explainable AI, energy-aware edge diagnostics for chest radiographs, and quantum route feasibility prediction.
+          </p>
+          <div class="pt-2 border-t dark:border-[#253B74]/80 border-[#E2E6F2] flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 sm:px-3 py-1 rounded-md theme-inset theme-text-primary font-semibold text-[11px] sm:text-xs"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Rigorous Benchmarking</span>
+            <span class="px-2.5 sm:px-3 py-1 rounded-md theme-inset theme-text-primary font-semibold text-[11px] sm:text-xs"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Post-Hoc Model Calibration</span>
+            <span class="px-2.5 sm:px-3 py-1 rounded-md theme-inset theme-text-primary font-semibold text-[11px] sm:text-xs"><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Reproducible Science</span>
+          </div>
+        </div>
+
+        <!-- Strengths & What I'm Looking For -->
+        <div class="lg:col-span-5 space-y-5 sm:space-y-6">
+          <div class="rounded-2xl p-5 sm:p-6 space-y-3 theme-card">
+            <h4 class="text-xs sm:text-sm font-bold uppercase tracking-wider font-mono theme-text-primary flex items-center gap-2">
+              <i class="fa-solid fa-bullseye text-[#536DA8]"></i>
+              <span>Core Strengths</span>
+            </h4>
+            <ul class="space-y-2 text-xs theme-text-secondary">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-[#536DA8] mt-0.5 flex-shrink-0"></i>
+                <span><strong class="theme-text-primary">Explainable AI (TreeSHAP):</strong> Multi-tier attribution and waterfall audits for non-linear tree ensembles.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-[#536DA8] mt-0.5 flex-shrink-0"></i>
+                <span><strong class="theme-text-primary">Imbalanced Cohorts &amp; Calibration:</strong> Platt scaling and Brier score minimization on low-incidence mortality cohorts.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-[#536DA8] mt-0.5 flex-shrink-0"></i>
+                <span><strong class="theme-text-primary">Edge AI &amp; Green Computing:</strong> Lightweight CNNs and federated edge optimization for resource-constrained medical hardware.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl p-5 sm:p-6 space-y-3 theme-card">
+            <h4 class="text-xs sm:text-sm font-bold uppercase tracking-wider font-mono theme-text-primary flex items-center gap-2">
+              <i class="fa-solid fa-handshake-simple text-[#536DA8]"></i>
+              <span>What I'm Looking For</span>
+            </h4>
+            <p class="text-xs theme-text-secondary leading-relaxed">
+              Actively seeking <strong class="theme-text-primary">PhD / Graduate Research Fellowships</strong>, international collaborative research opportunities in healthcare AI, and <strong class="theme-text-primary">Machine Learning Research roles</strong> with forward-thinking labs and technology organizations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PUBLICATIONS & PREPRINTS SECTION -->
+    <section id="publications" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#536DA8]"></span> SCHOLARLY CONTRIBUTIONS
+          </div>
+          <h2 class="mt-1 text-2xl sm:text-3xl font-extrabold tracking-tight theme-text-primary">Publications &amp; Preprints</h2>
+          <p class="text-xs sm:text-sm theme-text-muted mt-0.5">Peer-reviewed conference proceedings, journal manuscripts, and clinical research preprints</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 self-start sm:self-end">
+          <!-- Filter Tabs (Horizontally Scrollable on Mobile) -->
+          <div id="pub-filters" class="flex items-center gap-1.5 overflow-x-auto max-w-full pb-1 sm:pb-0 scrollbar-none flex-nowrap sm:flex-wrap">
+            <button data-pub="all" class="pub-tab active whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-mono transition flex-shrink-0">All (10)</button>
+            <button data-pub="Published" class="pub-tab whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-mono transition flex-shrink-0">Published &amp; Accepted (7)</button>
+            <button data-pub="Under Review" class="pub-tab whitespace-nowrap px-3 py-1.5 rounded-lg text-xs font-mono transition flex-shrink-0">Under Review (3)</button>
+          </div>
+
+          <!-- Stacking Deck vs Sequential List View Toggle -->
+          <div class="flex items-center gap-1.5 border-l dark:border-[#253B74] border-[#E2E6F2] pl-2">
+            <button id="pub-view-stack" class="pub-view-btn active px-2.5 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1 shadow-sm" title="Overlapping Stack Deck">
+              <i class="fa-solid fa-layer-group text-[10px]"></i>
+              <span class="hidden md:inline">Stack</span>
+            </button>
+            <button id="pub-view-list" class="pub-view-btn px-2.5 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1 shadow-sm" title="Standard Sequential List">
+              <i class="fa-solid fa-list-ul text-[10px]"></i>
+              <span class="hidden md:inline">List</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Time Search Input Filter Bar -->
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 transform -translate-y-1/2 text-[#536DA8] dark:text-[#8FA4D4] text-xs"></i>
+        <input id="pub-search-input" type="text" placeholder="Search publications by title, keyword (e.g. TreeSHAP, Transformer, CSDE, Telemedicine), or author..."
+               class="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs font-mono transition theme-inset theme-text-primary focus:outline-none focus:border-[#536DA8]">
+      </div>
+
+      <!-- Publications Overlapping Stacking Cards Container -->
+      <div id="publications-container" class="pub-stack-deck"></div>
+    </section>
+
+    <!-- 4. FEATURED ENGINEERING & RESEARCH SYSTEMS -->
+    <section id="engineering" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#536DA8]"></span> PRODUCTION ARCHITECTURES
+          </div>
+          <h2 class="mt-1 text-2xl sm:text-3xl font-extrabold tracking-tight theme-text-primary">Featured Engineering Systems</h2>
+          <p class="text-xs sm:text-sm theme-text-muted mt-0.5">Production machine learning pipelines, clinical benchmarks, and interactive data systems</p>
+        </div>
+
+        <!-- View Controls: Overlapping Stacking Cards Deck (Default) vs Compact 2-Col Grid -->
+        <div class="flex items-center gap-2 self-start sm:self-end">
+          <button id="view-stack-btn" class="proj-view-btn active px-3 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-layer-group text-[11px]"></i>
+            <span>Stack Deck (8)</span>
+          </button>
+          <button id="view-grid-btn" class="proj-view-btn px-3 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-table-cells-large text-[11px]"></i>
+            <span>2-Col Grid</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Overlapping Stacking Cards Deck Container (Default Scrollytelling/Stack Experience) -->
+      <div id="project-stack-deck" class="stack-card-deck"></div>
+
+      <!-- Compact 2-Column Grid Container (Toggled via Grid View) -->
+      <div id="all-projects-grid" class="hidden grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 pt-2"></div>
+    </section>
+
+    <!-- 5. TECHNICAL STACK / SKILLS ARSENAL -->
+    <section id="skills" class="space-y-6">
+      <div>
+        <div class="text-[11px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#536DA8]"></span> TECHNICAL PROFICIENCIES
+        </div>
+        <h2 class="mt-1 text-2xl sm:text-3xl font-extrabold tracking-tight theme-text-primary">Technical Stack &amp; Skills</h2>
+        <p class="text-xs sm:text-sm theme-text-muted mt-0.5">Categorized toolsets across machine learning, biomedical analysis, data engineering, and languages</p>
+      </div>
+
+      <!-- Skills by Category Container (Responsive Grid: 1 col on mobile, 2 on tablet, 3 on desktop) -->
+      <div id="skills-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"></div>
+    </section>
+
+    <!-- 6. PROFESSIONAL JOURNEY -->
+    <section id="journey" class="space-y-6">
+      <div>
+        <div class="text-[11px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#536DA8]"></span> RESEARCH &amp; WORK HISTORY
+        </div>
+        <h2 class="mt-1 text-2xl sm:text-3xl font-extrabold tracking-tight theme-text-primary">Professional Journey</h2>
+        <p class="text-xs sm:text-sm theme-text-muted mt-0.5">Research appointments, laboratory contributions, and academic departmental leadership</p>
+      </div>
+
+      <!-- Journey Timeline Cards Container -->
+      <div id="journey-container" class="space-y-4"></div>
+    </section>
+
+    <!-- 7. EDUCATION & HONORS -->
+    <section id="education" class="space-y-6">
+      <div>
+        <div class="text-[11px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#536DA8]"></span> ACADEMIC CREDENTIALS &amp; DISTINCTIONS
+        </div>
+        <h2 class="mt-1 text-2xl sm:text-3xl font-extrabold tracking-tight theme-text-primary">Education &amp; Honors</h2>
+        <p class="text-xs sm:text-sm theme-text-muted mt-0.5">Degrees, academic scholarships, and departmental honor roll distinctions</p>
+      </div>
+
+      <!-- Education Degree Cards (Responsive 1 col mobile, 2 col tablet/desktop) -->
+      <div id="education-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5"></div>
+
+      <!-- Academic Accolades Banner -->
+      <div class="rounded-2xl p-5 sm:p-6 theme-card space-y-3">
+        <h4 class="text-xs sm:text-sm font-bold font-mono uppercase tracking-wider theme-text-primary flex items-center gap-2">
+          <i class="fa-solid fa-award text-amber-500"></i>
+          <span>Academic Distinctions &amp; Scholarships</span>
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 rounded-xl theme-inset space-y-1">
+            <strong class="theme-text-primary block font-semibold"><i class="fa-solid fa-medal text-amber-500 mr-1.5"></i>Academic Scholarship for Excellence</strong>
+            <span class="theme-text-muted text-[11px]">Awarded by AIUB for continuous top-tier academic standing across consecutive semesters.</span>
+          </div>
+          <div class="p-3 rounded-xl theme-inset space-y-1">
+            <strong class="theme-text-primary block font-semibold"><i class="fa-solid fa-star text-amber-500 mr-1.5"></i>4x Dean's List Honors</strong>
+            <span class="theme-text-muted text-[11px]">Honored across Spring 2023–2024, Fall 2023–2024, Spring 2024–2025, and Fall 2024–2025.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT & COLLABORATION SECTION -->
+    <section id="contact" class="space-y-6">
+      <div>
+        <div class="text-[11px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> GET IN TOUCH
+        </div>
+        <h2 class="mt-1 text-2xl sm:text-3xl font-extrabold tracking-tight theme-text-primary">Initiate a Conversation</h2>
+        <p class="text-xs sm:text-sm theme-text-muted mt-0.5">Available for graduate research fellowships, clinical AI collaborations, and machine learning roles</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
+        <!-- Direct Contact Details Card -->
+        <div class="lg:col-span-5 rounded-2xl p-5 sm:p-7 space-y-5 theme-card flex flex-col justify-between">
+          <div class="space-y-4">
+            <h3 class="text-base sm:text-lg font-bold tracking-tight theme-text-primary">Contact Channels</h3>
+            <p class="text-xs sm:text-sm leading-relaxed theme-text-secondary">
+              Feel free to reach out directly via email or connect with me across my academic profiles. I typically respond within 24–48 hours.
+            </p>
+
+            <div class="space-y-2.5 text-xs font-mono pt-1">
+              <a href="mailto:faizabintezaman@gmail.com" class="flex items-center gap-3 p-3 rounded-xl theme-inset theme-text-primary hover:border-[#536DA8] transition min-w-0">
+                <i class="fa-regular fa-envelope text-[#536DA8] dark:text-[#8FA4D4] text-base flex-shrink-0"></i>
+                <span class="truncate">faizabintezaman@gmail.com</span>
+              </a>
+              <div class="flex items-center gap-3 p-3 rounded-xl theme-inset theme-text-primary min-w-0">
+                <i class="fa-solid fa-phone text-[#536DA8] dark:text-[#8FA4D4] text-base flex-shrink-0"></i>
+                <span class="truncate">+880 1706643731</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 rounded-xl theme-inset theme-text-primary min-w-0">
+                <i class="fa-solid fa-location-dot text-[#536DA8] dark:text-[#8FA4D4] text-base flex-shrink-0"></i>
+                <span class="truncate">Dhaka, Bangladesh (Open to Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t dark:border-[#253B74]/80 border-[#E2E6F2] flex flex-wrap gap-2">
+            <a href="https://scholar.google.com/citations?user=NuWTmywAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 transition theme-inset theme-text-primary hover:border-[#536DA8]">
+              <i class="ai ai-google-scholar text-[#536DA8] dark:text-[#8FA4D4]"></i> Google Scholar
+            </a>
+            <a href="https://github.com/wahida-binte" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 transition theme-inset theme-text-primary hover:border-[#536DA8]">
+              <i class="fa-brands fa-github text-[#536DA8] dark:text-[#8FA4D4]"></i> GitHub
+            </a>
+            <button class="copy-email-btn px-3 py-2 rounded-lg text-xs font-mono font-semibold flex items-center gap-1.5 transition theme-inset theme-text-primary hover:border-[#536DA8]">
+              <i class="fa-regular fa-copy"></i> Copy Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Message Form -->
+        <div class="lg:col-span-7 rounded-2xl p-5 sm:p-7 space-y-4 theme-card">
+          <h3 class="text-base sm:text-lg font-bold tracking-tight theme-text-primary">Send a Direct Message</h3>
+          <form id="contact-form" class="space-y-3.5 text-xs font-mono">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label for="contact-name" class="block mb-1 theme-text-muted font-semibold">Your Name *</label>
+                <input id="contact-name" type="text" required placeholder="e.g. Dr. Alex Mercer"
+                       class="w-full px-3.5 py-2.5 rounded-xl theme-inset theme-text-primary focus:outline-none focus:border-[#536DA8] transition">
+              </div>
+              <div>
+                <label for="contact-email" class="block mb-1 theme-text-muted font-semibold">Your Email *</label>
+                <input id="contact-email" type="email" required placeholder="e.g. alex@university.edu"
+                       class="w-full px-3.5 py-2.5 rounded-xl theme-inset theme-text-primary focus:outline-none focus:border-[#536DA8] transition">
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-subject" class="block mb-1 theme-text-muted font-semibold">Subject *</label>
+              <input id="contact-subject" type="text" required placeholder="e.g. Research Collaboration / Fellowship Inquiry"
+                     class="w-full px-3.5 py-2.5 rounded-xl theme-inset theme-text-primary focus:outline-none focus:border-[#536DA8] transition">
+            </div>
+
+            <div>
+              <label for="contact-message" class="block mb-1 theme-text-muted font-semibold">Message *</label>
+              <textarea id="contact-message" rows="4" required placeholder="Brief description of the collaboration, opportunity, or research inquiry..."
+                        class="w-full px-3.5 py-2.5 rounded-xl theme-inset theme-text-primary focus:outline-none focus:border-[#536DA8] transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-[#253B74] hover:bg-[#536DA8] text-[#E8EAF7] font-semibold text-xs transition shadow-lg shadow-[#253B74]/30 flex items-center justify-center gap-2">
+              <i class="fa-regular fa-paper-plane"></i>
+              <span>Dispatch Message to Faiza</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-6 sm:pt-8 pb-12 sm:pb-16 border-t dark:border-[#253B74]/80 border-[#E2E6F2]">
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs font-mono theme-text-muted gap-3 text-center sm:text-left">
+        <div>&copy; 2026 Faiza Binte Zaman &middot; Designed for accessibility, responsiveness &amp; clarity.</div>
+        <div class="flex items-center gap-4">
+          <a href="#hero" class="hover:text-[#536DA8] dark:hover:text-[#E8EAF7] transition flex items-center gap-1">
+            <span>Back to top</span>
+            <i class="fa-solid fa-arrow-up text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- BIBTEX CITATION MODAL DIALOG (Responsive Modal) -->
+  <div id="cite-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="rounded-2xl max-w-lg w-full p-4 sm:p-6 space-y-4 shadow-2xl theme-card max-h-[90vh] flex flex-col justify-between">
+      <div class="flex items-center justify-between border-b pb-3 dark:border-[#253B74] border-[#E2E6F2]">
+        <div class="text-xs font-mono font-semibold flex items-center gap-2 theme-text-primary">
+          <i class="fa-solid fa-quote-right text-[#536DA8] dark:text-[#8FA4D4]"></i> BibTeX Citation Entry
+        </div>
+        <button id="close-cite-modal" aria-label="Close citation modal" class="theme-text-muted hover:text-[#536DA8] dark:hover:text-[#E8EAF7] text-sm p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <pre id="cite-content" class="rounded-xl p-3 sm:p-4 text-[10px] sm:text-[11px] font-mono theme-inset theme-text-primary overflow-x-auto leading-relaxed max-h-60 sm:max-h-72 select-all"></pre>
+
+      <div class="flex items-center justify-between gap-2 pt-1">
+        <span class="text-[10px] font-mono theme-text-muted">Click Copy to paste into LaTeX.</span>
+        <button id="copy-cite-btn" class="px-4 py-2 rounded-lg bg-[#253B74] hover:bg-[#536DA8] text-[#E8EAF7] border border-[#536DA8]/50 text-xs font-semibold flex items-center gap-1.5 shadow-md transition">
+          <i class="fa-regular fa-copy"></i> Copy BibTeX
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPLETE SELF-CONTAINED JAVASCRIPT ENGINE -->
+  <script>
+    /* ==========================================================================
+       FAIZA BINTE ZAMAN - PORTFOLIO DATA & INTERACTION ENGINE
+       ========================================================================== */
+    const PORTFOLIO_DATA = {
+      "typewriterPhrases": [
+        "Investigating explainable clinical risk stratification (TreeSHAP)",
+        "Benchmarking Green Edge AI for clinical diagnosis (IEEE CSDE 2026)",
+        "Developing deep RL for rural telemedicine networks (IEEE CSDE 2026)",
+        "Formulating physics-informed ML for quantum networks (IEEE CSDE 2026)",
+        "Designing hybrid CNN-Transformers for medical diagnostics",
+        "Building calibrated survival & antimicrobial resistance models"
+      ],
+      "publications": [
+        {
+          "id": "iatmsi-2025",
+          "type": "CONFERENCE",
+          "year": "2025",
+          "venueShort": "IEEE IATMSI",
+          "featured": true,
+          "status": "Published",
+          "title": "Machine Learning Models for Predicting Olympic Medal Outcomes",
+          "authors": "Raiyan Sayeed, Mohammed Tanvir Hassan, Md Naimur Rahman, Faiza Binte Zaman, Sabbir Ahmed, Md Saef Ullah Miah",
+          "venue": "Proceedings of the 2025 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI), Vol. 3, pp. 1–6",
+          "tags": ["#Machine Learning", "#Ensemble Models", "#Hyperparameter Tuning"],
+          "abstract": "In this paper, the prediction of Olympic medal winners has been explored using various supervised machine learning models, utilizing historical Olympic participation and socioeconomic metrics to benchmark ensemble generalization.",
+          "pdf": "https://ieeexplore.ieee.org/document/10984687",
+          "publisher": "https://ieeexplore.ieee.org/document/10984687",
+          "doi": "https://doi.org/10.1109/IATMSI63197.2025.10984687",
+          "code": "https://github.com/wahida-binte",
+          "bibtex": `@inproceedings{sayeed2025machine,
+  title={Machine Learning Models for Predicting Olympic Medal Outcomes},
+  author={Sayeed, Raiyan and Hassan, Mohammed Tanvir and Rahman, Md Naimur and Zaman, Faiza Binte and Ahmed, Sabbir and Miah, Md Saef Ullah},
+  booktitle={2025 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI)},
+  volume={3},
+  pages={1--6},
+  year={2025},
+  doi={10.1109/IATMSI63197.2025.10984687}
+}`
+        },
+        {
+          "id": "hcii-2026",
+          "type": "CONFERENCE",
+          "year": "2026",
+          "venueShort": "HCII Springer",
+          "featured": true,
+          "status": "Published",
+          "title": "ReedMap: A Tangible Interaction System for Context-Aware and Division Based Map Navigation",
+          "authors": "Saif Mostasir Rohan, Tanzim Ikram Sheikh, Faiza Binte Zaman, Mustakim Ahmed, Md. Sayem Kabir, Khandaker Tabin Hasan",
+          "venue": "International Conference on Human-Computer Interaction (HCII 2026), Springer Nature Switzerland, pp. 445–461",
+          "tags": ["#Human-Computer Interaction", "#Tangible UI", "#Embedded Systems"],
+          "abstract": "Presents a magnet-actuated tangible user interface utilizing reed switch sensor matrices to synchronize physical tokens with context-aware geographical navigation across administrative divisions.",
+          "pdf": "https://link.springer.com/chapter/10.1007/978-3-032-30086-7_30",
+          "publisher": "https://link.springer.com/chapter/10.1007/978-3-032-30086-7_30",
+          "doi": "https://doi.org/10.1007/978-3-032-30086-7_30",
+          "code": "https://github.com/wahida-binte",
+          "bibtex": `@inproceedings{rohan2026reedmap,
+  title={ReedMap: A Tangible Interaction System for Context-Aware and Division Based Map Navigation},
+  author={Rohan, Saif Mostasir and Sheikh, Tanzim Ikram and Zaman, Faiza Binte and Ahmed, Mustakim and Kabir, Md Sayem and Hasan, Khandaker Tabin},
+  booktitle={International Conference on Human-Computer Interaction},
+  pages={445--461},
+  year={2026},
+  publisher={Springer Nature Switzerland},
+  doi={10.1007/978-3-032-30086-7_30}
+}`
+        },
+        {
+          "id": "icca-2026",
+          "type": "CONFERENCE",
+          "year": "2026",
+          "venueShort": "ICCA 2026",
+          "featured": true,
+          "status": "Published",
+          "title": "MentalBERT++: A Dual-Representation Transformer with Attention Pooling and Multi-Task Learning for Suicide Risk Detection from Online Text",
+          "authors": "Hadiur Rahman Nabil, Faiza Binte Zaman, Forhan Bin Emdad, Mohammad Mahmudul Hasan, Muhammad Aminur Rahaman, Md. Rajibul Islam",
+          "venue": "International Conference on Computing Advancements (ICCA 2026) — Accepted / To Appear",
+          "tags": ["#MentalBERT++", "#Attention Pooling", "#Multi-Task NLP"],
+          "abstract": "Formulates a dual-representation transformer architecture combining custom attention pooling and multi-task learning to improve clinical sensitivity in automated suicide risk detection from online text.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@inproceedings{nabil2026mentalbert,
+  title={MentalBERT++: A Dual-Representation Transformer with Attention Pooling and Multi-Task Learning for Suicide Risk Detection from Online Text},
+  author={Nabil, Hadiur Rahman and Zaman, Faiza Binte and Emdad, Forhan Bin and Hasan, Mohammad Mahmudul and Rahaman, Muhammad Aminur and Islam, Md Rajibul},
+  booktitle={International Conference on Computing Advancements (ICCA 2026)},
+  year={2026}
+}`
+        },
+        {
+          "id": "csde-telemed-2026",
+          "type": "CONFERENCE",
+          "year": "2026",
+          "venueShort": "IEEE CSDE 2026",
+          "featured": true,
+          "status": "Accepted",
+          "title": "Deep Reinforcement Learning for Adaptive Bitrate Control in Rural Telemedicine Networks",
+          "authors": "Sabbir Ahmed, Md. Naimur Rahman, Faiza Binte Zaman, Humayra Ferdous, Md. Rajibul Islam, Muhammad Aminur Rahaman",
+          "venue": "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox's Bazar, Bangladesh — Accepted / To Appear",
+          "tags": ["#Deep Reinforcement Learning", "#Telemedicine", "#Adaptive Bitrate", "#Edge Healthcare"],
+          "abstract": "Formulates a deep reinforcement learning framework for real-time adaptive bitrate control and packet jitter minimization in resource-constrained rural telemedicine video communication networks.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@inproceedings{ahmed2026deep,
+  title={Deep Reinforcement Learning for Adaptive Bitrate Control in Rural Telemedicine Networks},
+  author={Ahmed, Sabbir and Rahman, Md Naimur and Zaman, Faiza Binte and Ferdous, Humayra and Islam, Md Rajibul and Rahaman, Muhammad Aminur},
+  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},
+  year={2026},
+  organization={IEEE}
+}`
+        },
+        {
+          "id": "csde-pneumonia-2026",
+          "type": "CONFERENCE",
+          "year": "2026",
+          "venueShort": "IEEE CSDE 2026",
+          "featured": true,
+          "status": "Accepted",
+          "title": "Green Edge AI for Chest X-Ray Pneumonia Diagnosis: An EADA Benchmark",
+          "authors": "Md. Naimur Rahman, Faiza Binte Zaman, Sabbir Ahmed, Humayra Ferdous, Md. Rajibul Islam, Muhammad Aminur Rahaman",
+          "venue": "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox's Bazar, Bangladesh — Accepted / To Appear",
+          "tags": ["#Green Edge AI", "#Chest X-Ray", "#Pneumonia Diagnosis", "#EADA Benchmark"],
+          "abstract": "Establishes an Energy-Aware Diagnostic Architecture (EADA) benchmark systematically evaluating lightweight convolutional neural networks for sustainable, low-power pneumonia diagnosis on edge medical devices.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@inproceedings{rahman2026green,
+  title={Green Edge AI for Chest X-Ray Pneumonia Diagnosis: An EADA Benchmark},
+  author={Rahman, Md Naimur and Zaman, Faiza Binte and Ahmed, Sabbir and Ferdous, Humayra and Islam, Md Rajibul and Rahaman, Muhammad Aminur},
+  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},
+  year={2026},
+  organization={IEEE}
+}`
+        },
+        {
+          "id": "csde-quantum-2026",
+          "type": "CONFERENCE",
+          "year": "2026",
+          "venueShort": "IEEE CSDE 2026",
+          "featured": true,
+          "status": "Accepted",
+          "title": "Physics-Informed Machine Learning for Route Feasibility Prediction in Quantum Networks",
+          "authors": "Mustakim Ahmed, Faiza Binte Zaman, Md. Habibul Bashar, Sharfuddin Mahmood, Hadiur Rahman Nabil, Md. Rajibul Islam",
+          "venue": "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox's Bazar, Bangladesh — Accepted / To Appear",
+          "tags": ["#Physics-Informed ML", "#Quantum Networks", "#Route Feasibility", "#PIML"],
+          "abstract": "Introduces a physics-informed machine learning architecture incorporating decoherence dynamics and quantum entanglement constraints to predict end-to-end route feasibility across distributed quantum communication networks.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@inproceedings{ahmed2026physics,
+  title={Physics-Informed Machine Learning for Route Feasibility Prediction in Quantum Networks},
+  author={Ahmed, Mustakim and Zaman, Faiza Binte and Bashar, Md Habibul and Mahmood, Sharfuddin and Nabil, Hadiur Rahman and Islam, Md Rajibul},
+  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},
+  year={2026},
+  organization={IEEE}
+}`
+        },
+        {
+          "id": "csde-2026",
+          "type": "CONFERENCE",
+          "year": "2026",
+          "venueShort": "IEEE CSDE 2026",
+          "featured": true,
+          "status": "Accepted",
+          "title": "GreenHybridECGNet: Edge-Federated CNN-Transformers for Arrhythmia Classification",
+          "authors": "Faiza Binte Zaman, Sabbir Ahmed, Md. Naimur Rahman, Md. Rajibul Islam, Muhammad Aminur Rahaman",
+          "venue": "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox's Bazar, Bangladesh — Accepted / To Appear",
+          "tags": ["#Federated Learning", "#CNN-Transformer", "#Edge Healthcare"],
+          "abstract": "Proposes a lightweight, privacy-preserving edge-federated hybrid CNN-Transformer framework capable of classifying cardiac arrhythmias under constrained wearable hardware envelopes.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@inproceedings{zaman2026greenhybridecgnet,
+  title={GreenHybridECGNet: Edge-Federated CNN-Transformers for Arrhythmia Classification},
+  author={Zaman, Faiza Binte and Ahmed, Sabbir and Rahman, Md Naimur and Islam, Md Rajibul and Rahaman, Muhammad Aminur},
+  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},
+  year={2026},
+  organization={IEEE}
+}`
+        },
+        {
+          "id": "lung-2026",
+          "type": "JOURNAL",
+          "year": "2026",
+          "venueShort": "Biomedical Journal",
+          "featured": false,
+          "status": "Under Review",
+          "title": "Automated Lung Cancer Classification from Histopathological Images: An Intelligent Diagnostic Approach",
+          "authors": "Fariya Sultana Prity, Faiza Binte Zaman, Mahamodul Hasan Mahadi, Md Rakibul Islam",
+          "venue": "Biomedical Journal (Under Peer Review, 2026)",
+          "tags": ["#Histopathology", "#Deep Learning", "#Medical Imaging"],
+          "abstract": "Develops a deep learning diagnostic pipeline for high-precision multi-class classification of pulmonary malignancies from stained histopathological whole-slide image patches.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@article{prity2026lung,
+  title={Automated Lung Cancer Classification from Histopathological Images: An Intelligent Diagnostic Approach},
+  author={Prity, Fariya Sultana and Zaman, Faiza Binte and Mahadi, Mahamodul Hasan and Islam, Md Rakibul},
+  journal={Biomedical Journal},
+  year={2026}
+}`
+        },
+        {
+          "id": "fed-ojcs-2026",
+          "type": "JOURNAL",
+          "year": "2026",
+          "venueShort": "IEEE OJCS",
+          "featured": false,
+          "status": "Under Review",
+          "title": "Secure Intelligence at Scale: Federated Learning for Next-Generation Healthcare AI",
+          "authors": "Fariya Sultana Prity, Faiza Binte Zaman, Sheikh Rifat, Md. Mahadi Hasan, Tze Hui Liew",
+          "venue": "IEEE Open Journal of the Computer Society (Under Review, 2026)",
+          "tags": ["#Federated Learning", "#Healthcare Privacy", "#Distributed AI"],
+          "abstract": "Investigates decentralized federated optimization protocols and cryptographic privacy guarantees for multi-institutional clinical model training.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@article{prity2026secure,
+  title={Secure Intelligence at Scale: Federated Learning for Next-Generation Healthcare AI},
+  author={Prity, Fariya Sultana and Zaman, Faiza Binte and Rifat, Sheikh and Hasan, Md Mahadi and Liew, Tze Hui},
+  journal={IEEE Open Journal of the Computer Society},
+  year={2026}
+}`
+        },
+        {
+          "id": "caption-2026",
+          "type": "JOURNAL",
+          "year": "2026",
+          "venueShort": "CAEAI",
+          "featured": false,
+          "status": "Under Review",
+          "title": "A Comprehensive Review of Generative AI for Image Captioning",
+          "authors": "Faiza Binte Zaman, Jinia Sultana Sama, Rufaida Mamun, et al.",
+          "venue": "Computers and Education: Artificial Intelligence (Under Review, 2026)",
+          "tags": ["#Generative AI", "#Vision-Language", "#Transformers"],
+          "abstract": "Synthesizes architectural advancements in vision-language transformers, cross-modal attention, and generative decoding strategies for automated image and clinical report captioning.",
+          "pdf": "",
+          "publisher": "",
+          "doi": "",
+          "code": "",
+          "bibtex": `@article{zaman2026review,
+  title={A Comprehensive Review of Generative AI for Image Captioning},
+  author={Zaman, Faiza Binte and Sama, Jinia Sultana and Mamun, Rufaida},
+  journal={Computers and Education: Artificial Intelligence},
+  year={2026}
+}`
+        }
+      ],
+      "projects": [
+        {
+          "id": "ctg-xai",
+          "title": "Fetal Distress Risk Stratification from Cardiotocography",
+          "tag": "CLINICAL XAI",
+          "category": "xai",
+          "headline": "Explainable 3-Tier Fetal Compromise Triage",
+          "metricHighlight": "0.9854 Macro ROC-AUC | 93.93% Accuracy | 2,126 Recordings",
+          "summary": "Explainable three-tier fetal risk stratification (Normal / Suspect / Pathological) from 21 cardiotocography features using class-weighted LightGBM and 5-fold stratified cross-validation.",
+          "challenge": "Clinical CTG cohorts suffer from severe class imbalance (only 8.3% Pathological), where false negatives risk fetal compromise and black-box predictions lack obstetric trust.",
+          "tech": ["Python", "LightGBM", "TreeSHAP", "Scikit-learn", "Stratified CV", "Pytest"],
+          "github": "https://github.com/wahida-binte/fetal-distress-risk-stratification"
+        },
+        {
+          "id": "autovischeck",
+          "title": "AutoVisCheck: Intelligent EDA & Audit Platform",
+          "tag": "DATA SYSTEMS",
+          "category": "systems",
+          "headline": "Automated EDA & Misleading-Chart Risk Scorer",
+          "metricHighlight": "4-Stage Workflow | 5 Imputation Engines | Replayable Op-Log",
+          "summary": "Interactive Streamlit web application guiding users through cleaning, column-type-aware visualization, automated statistical interpretation, and exportable HTML/Markdown reporting.",
+          "challenge": "Manual exploratory data analysis is prone to irreversible cleaning mistakes and visually deceptive chart configurations (e.g., truncated axes or unnormalized group comparisons).",
+          "tech": ["Streamlit", "Plotly", "Pandas", "NumPy", "Pytest", "GitHub Actions CI"],
+          "github": "https://github.com/wahida-binte/autovischeck"
+        },
+        {
+          "id": "amr-ml",
+          "title": "Explainable ML for Antimicrobial Resistance (AMR)",
+          "tag": "BIOMEDICAL ML",
+          "category": "xai",
+          "headline": "Ciprofloxacin Resistance Prediction in E. coli",
+          "metricHighlight": "10,204 Validated Isolates | 0.7974 ROC-AUC | DRIAMS-A Cohort",
+          "summary": "End-to-end clinical machine learning pipeline predicting fluoroquinolone non-susceptibility in Escherichia coli using longitudinal hospital mass-spectra metadata (2015–2018).",
+          "challenge": "Raw clinical susceptibility registries contain 41 co-tested antibiotic outcomes that induce severe shortcut learning if not systematically purged prior to gradient boosting.",
+          "tech": ["Python", "XGBoost", "TreeSHAP", "DRIAMS Dataset", "Cost-Sensitive Learning"],
+          "github": "https://github.com/wahida-binte"
+        },
+        {
+          "id": "sepsis-xai",
+          "title": "Sepsis Survival XAI: Calibrated Mortality Benchmark",
+          "tag": "CLINICAL CALIBRATION",
+          "category": "xai",
+          "headline": "Platt-Calibrated In-Hospital Sepsis Mortality",
+          "metricHighlight": "110,204 Admissions | Brier 0.223 → 0.066 | 500x Bootstrap CI",
+          "summary": "Reproducible benchmark predicting in-hospital sepsis mortality from minimal clinical records using imbalance-aware XGBoost, sigmoid calibration, and patient-level SHAP waterfall audit trails.",
+          "challenge": "Standard cost-sensitive boosting (scale_pos_weight) heavily distorts predicted probabilities on 7.35% mortality cohorts, requiring post-hoc Platt scaling on a dedicated validation split.",
+          "tech": ["XGBoost", "Platt Calibration", "SHAP Waterfall", "Bootstrap CIs", "Scikit-learn"],
+          "github": "https://github.com/wahida-binte"
+        },
+        {
+          "id": "pediatric-bi",
+          "title": "Pediatric Immunization Surveillance & Dropout BI",
+          "tag": "EPIDEMIOLOGY BI",
+          "category": "systems",
+          "headline": "Global WUENIC Vaccine Trajectory & Dropout Suite",
+          "metricHighlight": "195 Countries | 16 Antigens | 58,080 Fact Cells (2000–2023)",
+          "summary": "Star-schema Power BI analytics platform and SQLite relational ETL pipeline tracking childhood immunization coverage, DTP1-to-DTP3 retention bottlenecks, and COVID-19 delivery shocks.",
+          "challenge": "Global WHO/UNICEF registries are distributed across fragmented wide-format Excel matrices, requiring automated unpivoting and DAX measures to isolate pandemic-era coverage drops.",
+          "tech": ["Power BI", "DAX", "Star Schema", "Python ETL", "SQLite", "Plotly"],
+          "github": "https://github.com/wahida-binte/pediatric-immunization-surveillance"
+        },
+        {
+          "id": "sarscov2-kmers",
+          "title": "SARS-CoV-2 Genomic Variant Clustering via k-mers",
+          "tag": "BIOINFORMATICS",
+          "category": "bio",
+          "headline": "Alignment-Free Viral Clade Discovery",
+          "metricHighlight": "~30k SARS-CoV-2 Genomes | 341 k-mer Features | Log2 Fold-Change",
+          "summary": "Unsupervised genomic clustering of ~30k viral sequences using 1- to 4-mer frequency spectra, PCA dimensionality reduction, MiniBatchKMeans, and XGBoost motif importance.",
+          "challenge": "Multiple sequence alignment across tens of thousands of full viral genomes is computationally expensive; k-mer frequency spectra enable rapid alignment-free motif profiling.",
+          "tech": ["Scikit-learn", "PCA", "MiniBatchKMeans", "XGBoost", "Genomics", "Python"],
+          "github": "https://github.com/wahida-binte"
+        },
+        {
+          "id": "face-cnn",
+          "title": "Real-Time CNN Face Recognition Pipeline",
+          "tag": "COMPUTER VISION",
+          "category": "cv",
+          "headline": "Live Video Facial Feature Extraction & Classification",
+          "metricHighlight": "End-to-End Custom Dataset | OpenCV + TensorFlow CNN",
+          "summary": "Constructed a custom labeled facial dataset, applied OpenCV spatial preprocessing, and trained a convolutional neural network for real-time identity inference on live video streams.",
+          "challenge": "Maintaining low-latency frame rates and classification stability under varying ambient lighting and camera angles during live webcam inference.",
+          "tech": ["Python", "TensorFlow", "CNN", "OpenCV", "Real-Time Video"],
+          "github": "https://github.com/wahida-binte"
+        },
+        {
+          "id": "cartcrush-erp",
+          "title": "Cart Crush: Retail & Financial Inventory ERP",
+          "tag": "ENTERPRISE SOFTWARE",
+          "category": "systems",
+          "headline": "Relational Retail Management & Document Automation",
+          "metricHighlight": "C# .NET Framework | SQL Server | Automated Receipts",
+          "summary": "Full-featured retail management platform integrating normalized SQL Server operations, inventory tracking, financial record auditing, and automated email/receipt generation.",
+          "challenge": "Ensuring transactional consistency across concurrent inventory updates, billing calculations, and automated receipt dispatch.",
+          "tech": ["C#", ".NET Framework", "SQL Server", "MVC Architecture"],
+          "github": ""
+        }
+      ],
+      "journey": [
+        {
+          "company": "ELITE Research Lab LLC",
+          "location": "Queens, New York, USA",
+          "logoIcon": "fa-solid fa-layer-group",
+          "role": "Research Assistant",
+          "period": "July 2025 – Present",
+          "badges": ["Contractual", "Remote (USA)"],
+          "description": "Contributing to machine learning and Explainable AI (XAI) research programs. Led experimental benchmarking on HeartSense 98.15 classifier development (achieving 98.15% accuracy on Statlog Heart dataset), multi-tier SHAP interpretability audits, feature contribution analysis, and LaTeX manuscript preparation for peer-reviewed IEEE venues.",
+          "skills": ["Python", "Machine Learning", "Explainable AI (SHAP)", "Scikit-learn", "Pandas", "NumPy", "Jupyter Notebook", "LaTeX", "Data Analysis", "Research Methodology"]
+        },
+        {
+          "company": "Advanced Machine Intelligence Research Lab (AMIR Lab)",
+          "location": "Dhaka, Bangladesh",
+          "logoIcon": "fa-solid fa-brain",
+          "role": "Research Intern",
+          "period": "Jan 2026 – June 2026",
+          "badges": ["Research Group", "Hybrid / Remote", "Completed"],
+          "description": "Executed deep learning research milestones on histopathological lung cancer image classification from stained whole-slide image patches and developed generative vision-language transformer architectures for automated medical diagnostic reporting.",
+          "skills": ["Deep Learning", "PyTorch", "TensorFlow", "Histopathology", "Transformers", "Medical Imaging", "Academic Writing"]
+        },
+        {
+          "company": "American International University-Bangladesh (AIUB)",
+          "location": "Department of Computer Science, Dhaka, Bangladesh",
+          "logoIcon": "fa-solid fa-building-columns",
+          "role": "Student Assistant, Intern",
+          "period": "July 2025 – Oct 2025",
+          "badges": ["On-Site", "Academic Dept"],
+          "description": "Supported departmental faculty and students with course registration workflows, academic advising protocols, confidential grading and student record management, and operational coordination during university orientations and research seminars.",
+          "skills": ["Academic Advising", "Operations", "Documentation", "Database Records", "Team Coordination"]
+        }
+      ],
+      "education": [
+        {
+          "degree": "Master of Science in Computer Science (M.Sc. CS)",
+          "school": "American International University-Bangladesh (AIUB)",
+          "period": "Jan 2026 – Present",
+          "badge": "CGPA: 3.80 / 4.00",
+          "focus": "Specializations: Deep Learning, Explainable AI (XAI), Medical Image Classification, Systems Design & Advanced Information Architecture.",
+          "icon": "fa-solid fa-graduation-cap"
+        },
+        {
+          "degree": "Bachelor of Science in Computer Science & Engineering (B.Sc. CSE)",
+          "school": "American International University-Bangladesh (AIUB)",
+          "period": "Jan 2022 – Dec 2025",
+          "badge": "CGPA: 3.89 / 4.00",
+          "focus": "Honors: Academic Scholarship for Excellence & 4x Dean's List Honors (Spring 2023–2024, Fall 2023–2024, Spring 2024–2025, Fall 2024–2025). Graduated in Top Tier of Department.",
+          "icon": "fa-solid fa-award"
+        }
+      ],
+      "skills": {
+        "Machine Learning & XAI": [
+          { "name": "Python", "icon": "fa-brands fa-python" },
+          { "name": "PyTorch", "icon": "fa-solid fa-fire" },
+          { "name": "TensorFlow", "icon": "fa-solid fa-cube" },
+          { "name": "LightGBM", "icon": "fa-solid fa-bolt" },
+          { "name": "XGBoost", "icon": "fa-solid fa-gauge-high" },
+          { "name": "Scikit-learn", "icon": "fa-solid fa-gear" },
+          { "name": "TreeSHAP & XAI", "icon": "fa-solid fa-brain" },
+          { "name": "OpenCV", "icon": "fa-solid fa-eye" }
+        ],
+        "Data Engineering & BI": [
+          { "name": "Pandas", "icon": "fa-solid fa-table" },
+          { "name": "NumPy", "icon": "fa-solid fa-calculator" },
+          { "name": "SQL Server", "icon": "fa-solid fa-database" },
+          { "name": "MySQL", "icon": "fa-solid fa-server" },
+          { "name": "SQLite", "icon": "fa-solid fa-hard-drive" },
+          { "name": "Power BI", "icon": "fa-solid fa-chart-pie" },
+          { "name": "DAX", "icon": "fa-solid fa-chart-line" },
+          { "name": "Streamlit", "icon": "fa-solid fa-sliders" },
+          { "name": "Plotly", "icon": "fa-solid fa-chart-simple" }
+        ],
+        "Systems & Languages": [
+          { "name": "C++", "icon": "fa-solid fa-code" },
+          { "name": "C#", "icon": "fa-brands fa-microsoft" },
+          { "name": "Java", "icon": "fa-brands fa-java" },
+          { "name": ".NET Framework", "icon": "fa-solid fa-cubes" },
+          { "name": "R", "icon": "fa-solid fa-chart-bar" },
+          { "name": "JavaScript", "icon": "fa-brands fa-js" },
+          { "name": "HTML5 / CSS3", "icon": "fa-brands fa-html5" },
+          { "name": "LaTeX", "icon": "fa-solid fa-file-invoice" },
+          { "name": "Git & GitHub", "icon": "fa-brands fa-git-alt" }
+        ]
+      }
+    };
+
+    // Global application state
+    let currentPubFilter = 'all';
+    let currentPubSearch = '';
+    let isPubStackMode = true;
+
+    // Initialize application on DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      initPortfolio();
+    });
+
+    /* --------------------------------------------------------------------------
+       1. Theme Engine (Light / Dark Mode Persistence)
+       -------------------------------------------------------------------------- */
+    function initTheme() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const toggleIcon = document.getElementById('theme-toggle-icon');
+      
+      const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+      if (savedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+        if (toggleIcon) toggleIcon.className = 'fa-solid fa-sun text-sm text-amber-500';
+      } else {
+        document.documentElement.classList.add('dark');
+        if (toggleIcon) toggleIcon.className = 'fa-solid fa-moon text-sm text-[#8FA4D4]';
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+          if (toggleIcon) {
+            toggleIcon.className = isDark ? 'fa-solid fa-moon text-sm text-[#8FA4D4]' : 'fa-solid fa-sun text-sm text-amber-500';
+          }
+          showToast(isDark ? 'Midnight Velvet Dark Theme enabled' : 'Light Canvas Theme enabled');
+        });
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       2. Publication Count Synchronizer
+       -------------------------------------------------------------------------- */
+    function updatePublicationCounts() {
+      const pubs = PORTFOLIO_DATA.publications;
+      const acceptedOrPublished = pubs.filter(p => p.status === 'Published' || p.status === 'Accepted').length;
+      const underReview = pubs.filter(p => p.status === 'Under Review').length;
+      const total = pubs.length;
+
+      const allTab = document.querySelector('[data-pub="all"]');
+      const pubTab = document.querySelector('[data-pub="Published"]');
+      const revTab = document.querySelector('[data-pub="Under Review"]');
+
+      if (allTab) allTab.textContent = `All (${total})`;
+      if (pubTab) pubTab.textContent = `Published & Accepted (${acceptedOrPublished})`;
+      if (revTab) revTab.textContent = `Under Review (${underReview})`;
+
+      const pubStatEl = document.getElementById('stat-pub-count');
+      if (pubStatEl) pubStatEl.textContent = `${total}`;
+
+      const pubHeroBtn = document.getElementById('hero-pub-btn-text');
+      if (pubHeroBtn) pubHeroBtn.textContent = `View Publications (${total})`;
+
+      const pubBreakdownEl = document.getElementById('hero-pub-breakdown');
+      if (pubBreakdownEl) pubBreakdownEl.innerHTML = `${acceptedOrPublished} Accepted &middot; ${underReview} Review`;
+    }
+
+    function initPortfolio() {
+      updatePublicationCounts();
+      initTypewriter(PORTFOLIO_DATA.typewriterPhrases);
+      renderPublications(PORTFOLIO_DATA.publications, currentPubFilter, currentPubSearch);
+      renderProjectStackDeck(PORTFOLIO_DATA.projects);
+      renderAllProjectsGrid(PORTFOLIO_DATA.projects);
+      renderJourney(PORTFOLIO_DATA.journey);
+      renderEducation(PORTFOLIO_DATA.education);
+      renderSkills(PORTFOLIO_DATA.skills);
+      bindInteractions();
+    }
+
+    /* --------------------------------------------------------------------------
+       3. Typewriter Animation Engine
+       -------------------------------------------------------------------------- */
+    function initTypewriter(phrases) {
+      const el = document.getElementById('typewriter-text');
+      if (!el || !phrases || !phrases.length) return;
+      let pIdx = 0;
+      let charIdx = 0;
+      let deleting = false;
+
+      function tick() {
+        const current = phrases[pIdx];
+        if (!deleting) {
+          charIdx++;
+          el.textContent = current.slice(0, charIdx);
+          if (charIdx === current.length) {
+            deleting = true;
+            setTimeout(tick, 2200);
+            return;
+          }
+          setTimeout(tick, 42);
+        } else {
+          charIdx--;
+          el.textContent = current.slice(0, charIdx);
+          if (charIdx === 0) {
+            deleting = false;
+            pIdx = (pIdx + 1) % phrases.length;
+            setTimeout(tick, 350);
+            return;
+          }
+          setTimeout(tick, 24);
+        }
+      }
+      tick();
+    }
+
+    /* --------------------------------------------------------------------------
+       4. Publications Render & Filter Engine (Fully Responsive)
+       -------------------------------------------------------------------------- */
+    function renderPublications(pubs, filter, searchQuery) {
+      const container = document.getElementById('publications-container');
+      if (!container) return;
+
+      const query = (searchQuery || '').trim().toLowerCase();
+
+      let list = pubs;
+      if (filter === 'Published') {
+        list = list.filter(p => p.status === 'Published' || p.status === 'Accepted');
+      } else if (filter === 'Under Review') {
+        list = list.filter(p => p.status === 'Under Review');
+      }
+
+      if (query) {
+        list = list.filter(p => {
+          const matchTitle = p.title.toLowerCase().includes(query);
+          const matchAuthors = p.authors.toLowerCase().includes(query);
+          const matchVenue = p.venue.toLowerCase().includes(query);
+          const matchAbstract = p.abstract.toLowerCase().includes(query);
+          const matchTags = p.tags.some(t => t.toLowerCase().includes(query));
+          return matchTitle || matchAuthors || matchVenue || matchAbstract || matchTags;
+        });
+      }
+
+      if (list.length === 0) {
+        container.className = "space-y-4";
+        container.innerHTML = `
+          <div class="rounded-2xl p-6 sm:p-10 text-center space-y-2 theme-card">
+            <i class="fa-solid fa-magnifying-glass text-[#536DA8] text-2xl"></i>
+            <h4 class="font-bold text-sm theme-text-primary">No matching publications found</h4>
+            <p class="text-xs theme-text-muted">Try adjusting your filter keyword or click "All" to reset.</p>
+          </div>
+        `;
+        return;
+      }
+
+      // Configure container class based on active view mode
+      container.className = isPubStackMode ? "pub-stack-deck" : "space-y-4";
+
+      container.innerHTML = list.map((pub, idx) => {
+        const formattedAuthors = pub.authors.replace(
+          /Faiza Binte Zaman/g,
+          '<strong class="underline decoration-[#536DA8] underline-offset-4 font-semibold theme-text-primary">Faiza Binte Zaman</strong>'
+        );
+
+        let statusBadge = '';
+        if (pub.status === 'Accepted') {
+          statusBadge = `<span class="px-2.5 py-1 rounded-md bg-[#253B74] text-[#E8EAF7] text-[10px] font-mono font-semibold tracking-wider uppercase flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+               <i class="fa-solid fa-circle-check text-[9px] text-emerald-400"></i> ACCEPTED / TO APPEAR
+             </span>`;
+        } else if (pub.featured) {
+          statusBadge = `<span class="px-2.5 py-1 rounded-md bg-[#253B74] text-[#E8EAF7] text-[10px] font-mono font-semibold tracking-wider uppercase flex items-center gap-1.5 shadow-sm whitespace-nowrap">
+               <i class="fa-solid fa-wand-magic-sparkles text-[9px] text-[#8FA4D4]"></i> FEATURED PAPER
+             </span>`;
+        } else {
+          statusBadge = `<span class="px-2.5 py-1 rounded-md text-[10px] font-mono font-semibold uppercase flex items-center gap-1.5 theme-inset theme-text-secondary whitespace-nowrap">
+               <span class="w-1.5 h-1.5 rounded-full ${pub.status === 'Published' ? 'bg-emerald-400' : 'bg-[#536DA8]'}"></span> ${pub.status}
+             </span>`;
+        }
+
+        // Stacking calculations: 6px offset per card on desktop, 2px on mobile
+        const desktopOffset = idx * 6;
+        const mobileOffset = idx * 2;
+        const zIndex = 10 + idx;
+
+        const stackStyles = isPubStackMode
+          ? `style="--pub-stack-offset: ${desktopOffset}px; --pub-stack-offset-mob: ${mobileOffset}px; z-index: ${zIndex};"`
+          : '';
+        const cardClass = isPubStackMode ? "pub-stack-card" : "theme-card";
+
+        return `
+          <article class="${cardClass} rounded-2xl p-5 sm:p-7 space-y-3.5 sm:space-y-4" ${stackStyles}>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b pb-3 dark:border-[#253B74]/80 border-[#E2E6F2]">
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] font-mono">
+                <span class="px-2.5 py-0.5 rounded bg-[#253B74] text-[#E8EAF7] font-bold">${pub.type}</span>
+                <span class="text-[#536DA8]">&bull;</span>
+                <span class="font-semibold theme-text-primary">${pub.year}</span>
+                <span class="text-[#536DA8]">&bull;</span>
+                <span class="px-2 py-0.5 rounded theme-inset text-[#536DA8] dark:text-[#8FA4D4] font-semibold">${pub.venueShort}</span>
+                <span class="text-[#536DA8] hidden xs:inline">&bull;</span>
+                <span class="text-[10px] font-mono text-[#536DA8] dark:text-[#8FA4D4] font-semibold hidden xs:inline">
+                  Paper 0${idx + 1} / ${String(list.length).padStart(2, '0')}
+                </span>
+              </div>
+              <div class="self-start sm:self-auto">${statusBadge}</div>
+            </div>
+
+            <h3 class="text-base sm:text-lg md:text-xl font-bold leading-snug tracking-tight hover:text-[#536DA8] dark:hover:text-[#8FA4D4] transition theme-text-primary">
+              ${pub.title}
+            </h3>
+
+            <p class="text-[11px] sm:text-xs font-mono theme-text-secondary leading-relaxed">${formattedAuthors}</p>
+            <p class="text-xs italic theme-text-muted border-l-2 border-[#536DA8]/60 pl-3">${pub.venue}</p>
+
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-0.5">
+              ${pub.tags.map(t => `<span class="px-2 py-0.5 rounded-md text-[10px] sm:text-[11px] font-mono theme-inset theme-text-muted">${t}</span>`).join('')}
+            </div>
+
+            <p class="text-xs sm:text-sm theme-text-secondary leading-relaxed">${pub.abstract}</p>
+
+            <div class="pt-3 border-t dark:border-[#253B74]/80 border-[#E2E6F2] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
+              <div class="flex flex-wrap items-center gap-2">
+                ${pub.publisher ? `
+                  <a href="${pub.publisher}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#253B74] hover:bg-[#536DA8] text-[#E8EAF7] flex items-center gap-1.5 transition text-[11px] sm:text-xs font-semibold shadow-sm">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Publisher Page
+                  </a>
+                ` : ''}
+                ${pub.doi ? `
+                  <a href="${pub.doi}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg theme-inset theme-text-primary hover:border-[#536DA8] flex items-center gap-1.5 transition text-[11px] sm:text-xs">
+                    <i class="ai ai-doi text-[#536DA8] dark:text-[#8FA4D4]"></i> DOI
+                  </a>
+                ` : ''}
+                ${pub.code ? `
+                  <a href="${pub.code}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg theme-inset theme-text-primary hover:border-[#536DA8] flex items-center gap-1.5 transition text-[11px] sm:text-xs">
+                    <i class="fa-solid fa-code text-[10px] text-[#536DA8] dark:text-[#8FA4D4]"></i> GitHub Code
+                  </a>
+                ` : ''}
+                <button data-cite-id="${pub.id}" class="cite-btn px-3 py-1.5 rounded-lg theme-inset theme-text-primary hover:border-[#536DA8] flex items-center gap-1.5 transition text-[11px] sm:text-xs font-semibold">
+                  <i class="fa-solid fa-quote-right text-[10px] text-[#536DA8] dark:text-[#8FA4D4]"></i> BibTeX
+                </button>
+              </div>
+
+              <div class="self-start sm:self-auto pt-1 sm:pt-0">
+                ${(pub.publisher || pub.pdf) ? `
+                  <a href="${pub.publisher || pub.pdf}" target="_blank" rel="noopener noreferrer" class="text-[#536DA8] dark:text-[#8FA4D4] hover:underline font-semibold flex items-center gap-1.5 transition text-xs">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    <span>View Online Paper</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </a>
+                ` : `
+                  <span class="theme-text-muted text-[11px] font-mono flex items-center gap-1.5 select-none">
+                    <i class="fa-solid fa-clock-rotate-left text-[10px] text-[#536DA8]"></i>
+                    <span>${pub.status === 'Under Review' ? 'Under Review (Not Online)' : 'Proceedings Forthcoming'}</span>
+                  </span>
+                `}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /* --------------------------------------------------------------------------
+       5. Featured Engineering Systems (Overlapping Stacking Cards Deck)
+       -------------------------------------------------------------------------- */
+    function renderProjectStackDeck(projects) {
+      const container = document.getElementById('project-stack-deck');
+      if (!container || !projects || !projects.length) return;
+
+      container.innerHTML = projects.map((p, idx) => {
+        // Desktop top offset steps down by 8px, creating an elegant layered card deck rim
+        const desktopOffset = idx * 8;
+        // Mobile offset steps by 3px
+        const mobileOffset = idx * 3;
+        const zIndex = 10 + idx;
+
+        return `
+          <article class="stack-card rounded-2xl overflow-hidden p-5 sm:p-7 lg:p-8"
+                   style="--stack-offset: ${desktopOffset}px; --stack-offset-mob: ${mobileOffset}px; z-index: ${zIndex};">
+            
+            <!-- Card Top Bar: Badges, Index & Repository Indicator -->
+            <div class="flex items-center justify-between gap-3 border-b pb-3.5 sm:pb-4 dark:border-[#253B74]/80 border-[#E2E6F2]">
+              <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                <span class="px-2.5 sm:px-3 py-1 rounded-md bg-[#253B74] text-[#E8EAF7] text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-sm flex-shrink-0">
+                  <i class="fa-solid fa-microchip text-[10px] text-[#8FA4D4]"></i>
+                  <span>${p.tag}</span>
+                </span>
+                <span class="text-[11px] sm:text-xs font-mono font-bold text-[#536DA8] dark:text-[#8FA4D4] whitespace-nowrap">
+                  Pipeline 0${idx + 1} <span class="theme-text-muted font-normal">/ 08</span>
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2 flex-shrink-0">
+                <span class="text-[10px] sm:text-[11px] font-mono text-emerald-600 dark:text-emerald-300 font-semibold flex items-center gap-1.5 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="hidden xs:inline">Benchmarked</span>
+                </span>
+                ${p.github ? `
+                  <span class="hidden sm:inline-flex items-center gap-1 text-[10px] font-mono theme-text-muted px-2 py-0.5 rounded theme-inset">
+                    <i class="fa-brands fa-github text-[#536DA8] dark:text-[#8FA4D4]"></i> Public Repo
+                  </span>
+                ` : `
+                  <span class="hidden sm:inline-flex items-center gap-1 text-[10px] font-mono theme-text-muted px-2 py-0.5 rounded theme-inset">
+                    <i class="fa-solid fa-lock text-[#536DA8] text-[9px]"></i> Private Repo
+                  </span>
+                `}
+              </div>
+            </div>
+
+            <!-- Card Body: Split Grid on Desktop, Stacked on Mobile -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 pt-4 sm:pt-5">
+              
+              <!-- Left Column: Title, Headline, Metric Highlight & Challenge -->
+              <div class="lg:col-span-6 space-y-3.5 sm:space-y-4">
+                <div>
+                  <div class="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-[#536DA8] dark:text-[#8FA4D4] font-semibold">${p.headline}</div>
+                  <h3 class="text-lg sm:text-xl lg:text-2xl font-extrabold tracking-tight theme-text-primary mt-1 leading-snug">${p.title}</h3>
+                </div>
+
+                <!-- Empirical Benchmark Metric Terminal Callout -->
+                <div class="rounded-xl p-3 sm:p-3.5 theme-inset space-y-2 shadow-inner">
+                  <div class="flex items-center justify-between border-b dark:border-[#253B74]/80 border-[#E2E6F2] pb-1.5">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-rose-500/80"></span>
+                      <span class="w-2 h-2 rounded-full bg-amber-500/80"></span>
+                      <span class="w-2 h-2 rounded-full bg-emerald-500/80"></span>
+                    </div>
+                    <span class="text-[10px] font-mono theme-text-muted">pipeline_benchmark.json</span>
+                  </div>
+                  <div class="text-xs sm:text-[13px] font-mono font-bold bg-[#253B74] text-[#E8EAF7] rounded-lg px-3 py-2 leading-relaxed shadow-sm break-words">
+                    <i class="fa-solid fa-chart-line text-[#8FA4D4] mr-1.5"></i> ${p.metricHighlight}
+                  </div>
+                </div>
+
+                <!-- Engineering Challenge Box -->
+                <div class="rounded-xl p-3 sm:p-3.5 theme-inset space-y-1">
+                  <div class="text-[10px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+                    <i class="fa-solid fa-triangle-exclamation text-[10px]"></i> CORE CHALLENGE &amp; MITIGATION:
+                  </div>
+                  <p class="text-xs theme-text-secondary leading-relaxed font-sans">${p.challenge}</p>
+                </div>
+              </div>
+
+              <!-- Right Column: Architecture Summary, Tech Arsenal & Action Button -->
+              <div class="lg:col-span-6 flex flex-col justify-between space-y-4">
+                <div class="space-y-3.5">
+                  <div class="space-y-1.5">
+                    <div class="text-[10px] font-mono uppercase tracking-widest theme-text-muted font-semibold">SYSTEM METHODOLOGY:</div>
+                    <p class="text-xs sm:text-sm theme-text-secondary leading-relaxed">${p.summary}</p>
+                  </div>
+
+                  <div class="space-y-2 pt-1">
+                    <div class="text-[10px] font-mono uppercase tracking-widest theme-text-muted font-semibold">TECHNOLOGY ARSENAL:</div>
+                    <div class="flex flex-wrap gap-1.5">
+                      ${p.tech.map(t => `<span class="px-2.5 py-1 rounded-md text-[11px] sm:text-xs font-mono theme-inset theme-text-primary font-medium">${t}</span>`).join('')}
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Footer -->
+                <div class="pt-4 border-t dark:border-[#253B74]/80 border-[#E2E6F2] flex items-center justify-between gap-3 text-xs font-mono">
+                  ${p.github ? `
+                    <a href="${p.github}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-[#253B74] hover:bg-[#536DA8] text-[#E8EAF7] border border-[#536DA8]/50 font-semibold flex items-center gap-2 shadow-md transition text-xs">
+                      <i class="fa-brands fa-github text-sm"></i>
+                      <span>Explore Repository</span>
+                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                  ` : `
+                    <span class="px-3.5 py-2 rounded-lg text-xs font-mono flex items-center gap-2 cursor-not-allowed select-none theme-inset theme-text-muted">
+                      <i class="fa-solid fa-lock text-xs text-[#536DA8]"></i>
+                      <span>Code Repository Private</span>
+                    </span>
+                  `}
+
+                  <span class="text-[11px] font-mono text-[#536DA8] dark:text-[#8FA4D4] font-semibold">
+                    System #0${idx + 1}
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /* --------------------------------------------------------------------------
+       6. Full 8-Project Expandable Grid Render
+       -------------------------------------------------------------------------- */
+    function renderAllProjectsGrid(projects) {
+      const container = document.getElementById('all-projects-grid');
+      if (!container) return;
+
+      container.innerHTML = projects.map((p, idx) => `
+        <article class="rounded-2xl p-5 sm:p-6 space-y-4 transition flex flex-col justify-between theme-card">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-md bg-[#253B74] text-[#E8EAF7] text-[10px] font-mono font-bold uppercase">
+                ${p.tag}
+              </span>
+              <span class="text-xs font-mono theme-text-muted font-bold">#0${idx + 1}</span>
+            </div>
+
+            <div>
+              <h4 class="text-base sm:text-lg font-bold tracking-tight leading-snug hover:text-[#536DA8] dark:hover:text-[#8FA4D4] transition theme-text-primary">${p.title}</h4>
+              <p class="text-xs font-mono text-[#536DA8] dark:text-[#8FA4D4] mt-1">${p.headline}</p>
+            </div>
+
+            <div class="text-xs font-mono bg-[#253B74] text-[#E8EAF7] rounded-lg px-3 py-1.5 shadow-sm break-words">
+              <i class="fa-solid fa-chart-line text-[#8FA4D4] mr-1"></i> ${p.metricHighlight}
+            </div>
+
+            <p class="text-xs theme-text-secondary leading-relaxed">${p.summary}</p>
+
+            <div class="p-3 rounded-lg text-[11px] theme-text-muted leading-relaxed theme-inset">
+              <strong class="text-[#536DA8] dark:text-[#8FA4D4] font-mono text-[10px] block mb-1">CHALLENGE:</strong>
+              ${p.challenge}
+            </div>
+          </div>
+
+          <div class="pt-3 border-t dark:border-[#253B74]/80 border-[#E2E6F2] space-y-3">
+            <div class="flex flex-wrap gap-1.5">
+              ${p.tech.map(t => `<span class="px-2 py-0.5 rounded text-[10px] font-mono theme-inset theme-text-secondary">${t}</span>`).join('')}
+            </div>
+
+            <div class="flex items-center justify-between pt-1 text-xs font-mono">
+              ${p.github ? `
+                <a href="${p.github}" target="_blank" rel="noopener noreferrer" class="text-[#536DA8] dark:text-[#8FA4D4] hover:underline font-semibold flex items-center gap-1.5 transition">
+                  <i class="fa-brands fa-github"></i> Repository <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              ` : `
+                <span class="theme-text-muted text-[11px] font-mono flex items-center gap-1.5 select-none">
+                  <i class="fa-solid fa-lock text-[10px] text-[#536DA8]"></i> Private Repository
+                </span>
+              `}
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    /* --------------------------------------------------------------------------
+       7. Professional Journey Render
+       -------------------------------------------------------------------------- */
+    function renderJourney(journey) {
+      const container = document.getElementById('journey-container');
+      if (!container) return;
+
+      container.innerHTML = journey.map((item) => `
+        <div class="rounded-2xl p-5 sm:p-7 space-y-4 theme-card">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b dark:border-[#253B74]/80 border-[#E2E6F2] pb-3.5 sm:pb-4">
+            <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#253B74] flex items-center justify-center text-[#E8EAF7] text-base sm:text-lg shadow-lg flex-shrink-0">
+                <i class="${item.logoIcon}"></i>
+              </div>
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold tracking-tight theme-text-primary truncate">${item.company}</h3>
+                <div class="text-xs font-mono text-[#536DA8] dark:text-[#8FA4D4] font-semibold truncate">${item.role}</div>
+                <div class="text-[11px] font-mono theme-text-muted mt-0.5 truncate"><i class="fa-solid fa-location-dot mr-1 text-[#536DA8]"></i>${item.location}</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap sm:flex-col items-start sm:items-end justify-between gap-1.5 flex-shrink-0">
+              <span class="text-xs font-mono font-semibold px-3 py-1 rounded-md theme-inset theme-text-primary">
+                ${item.period}
+              </span>
+              <div class="flex flex-wrap gap-1.5">
+                ${item.badges.map(b => `<span class="px-2 py-0.5 rounded text-[10px] font-mono font-medium bg-[#253B74] text-[#E8EAF7]">${b}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm theme-text-secondary leading-relaxed">${item.description}</p>
+
+          <div class="space-y-1.5 pt-1">
+            <div class="text-[10px] font-mono uppercase tracking-widest text-[#536DA8] dark:text-[#8FA4D4] font-semibold">COMPETENCIES APPLIED:</div>
+            <div class="flex flex-wrap gap-1.5">
+              ${item.skills.map(s => `<span class="px-2.5 py-1 rounded-md text-[10px] sm:text-[11px] font-mono theme-inset theme-text-primary">${s}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    /* --------------------------------------------------------------------------
+       8. Education Render
+       -------------------------------------------------------------------------- */
+    function renderEducation(education) {
+      const container = document.getElementById('education-container');
+      if (!container) return;
+
+      container.innerHTML = education.map((edu) => `
+        <div class="rounded-2xl p-5 sm:p-6 space-y-4 theme-card">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-xl bg-[#253B74] flex items-center justify-center text-[#E8EAF7] text-base shadow-sm flex-shrink-0">
+                <i class="${edu.icon}"></i>
+              </div>
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold tracking-tight theme-text-primary truncate">${edu.degree}</h3>
+                <p class="text-xs font-mono text-[#536DA8] dark:text-[#8FA4D4] mt-0.5 truncate">${edu.school}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+            <span class="px-3 py-1 rounded-md theme-inset theme-text-secondary">${edu.period}</span>
+            <span class="px-3 py-1 rounded-md bg-[#253B74] text-[#E8EAF7] font-bold">${edu.badge}</span>
+          </div>
+
+          <p class="text-xs sm:text-sm theme-text-secondary leading-relaxed border-t dark:border-[#253B74]/80 border-[#E2E6F2] pt-3">${edu.focus}</p>
+        </div>
+      `).join('');
+    }
+
+    /* --------------------------------------------------------------------------
+       9. Technical Stack / Arsenal Render
+       -------------------------------------------------------------------------- */
+    function renderSkills(skills) {
+      const container = document.getElementById('skills-container');
+      if (!container) return;
+
+      container.innerHTML = Object.entries(skills).map(([category, items]) => `
+        <div class="rounded-2xl p-5 sm:p-6 space-y-3.5 sm:space-y-4 theme-card">
+          <div class="flex items-center gap-2.5 border-b dark:border-[#253B74]/80 border-[#E2E6F2] pb-3">
+            <span class="w-2 h-2 rounded-full bg-[#536DA8]"></span>
+            <h3 class="text-xs sm:text-sm font-bold uppercase tracking-wider font-mono theme-text-primary">${category}</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 sm:gap-2">
+            ${items.map(item => `
+              <div class="px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-mono flex items-center gap-1.5 sm:gap-2 transition group theme-inset theme-text-primary hover:border-[#536DA8]">
+                <i class="${item.icon} text-[#536DA8] dark:text-[#8FA4D4] group-hover:scale-110 transition flex-shrink-0"></i>
+                <span class="truncate">${item.name}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    /* --------------------------------------------------------------------------
+       10. Interactions & Event Handlers
+       -------------------------------------------------------------------------- */
+    function bindInteractions() {
+      // Mobile drawer toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileIcon = document.getElementById('mobile-menu-icon');
+
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = mobileMenu.classList.toggle('hidden');
+          if (mobileIcon) {
+            mobileIcon.className = isHidden ? 'fa-solid fa-bars text-sm' : 'fa-solid fa-xmark text-sm';
+          }
+        });
+
+        // Close on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            if (mobileIcon) mobileIcon.className = 'fa-solid fa-bars text-sm';
+          });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+          if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+            if (mobileIcon) mobileIcon.className = 'fa-solid fa-bars text-sm';
+          }
+        });
+      }
+
+      // Publication filter tabs
+      const pubTabs = document.querySelectorAll('.pub-tab');
+      pubTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          pubTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentPubFilter = tab.getAttribute('data-pub') || 'all';
+          renderPublications(PORTFOLIO_DATA.publications, currentPubFilter, currentPubSearch);
+        });
+      });
+
+      // Publication search input
+      const searchInput = document.getElementById('pub-search-input');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentPubSearch = e.target.value;
+          renderPublications(PORTFOLIO_DATA.publications, currentPubFilter, currentPubSearch);
+        });
+      }
+
+      // Publication View Switcher: Overlapping Stack Deck vs Sequential List
+      const pubViewStackBtn = document.getElementById('pub-view-stack');
+      const pubViewListBtn = document.getElementById('pub-view-list');
+
+      if (pubViewStackBtn && pubViewListBtn) {
+        pubViewStackBtn.addEventListener('click', () => {
+          isPubStackMode = true;
+          pubViewStackBtn.classList.add('active');
+          pubViewListBtn.classList.remove('active');
+          renderPublications(PORTFOLIO_DATA.publications, currentPubFilter, currentPubSearch);
+        });
+
+        pubViewListBtn.addEventListener('click', () => {
+          isPubStackMode = false;
+          pubViewListBtn.classList.add('active');
+          pubViewStackBtn.classList.remove('active');
+          renderPublications(PORTFOLIO_DATA.publications, currentPubFilter, currentPubSearch);
+        });
+      }
+
+      // Project View Switcher: Overlapping Stacking Cards Deck vs 2-Col Grid
+      const viewStackBtn = document.getElementById('view-stack-btn');
+      const viewGridBtn = document.getElementById('view-grid-btn');
+      const stackDeck = document.getElementById('project-stack-deck');
+      const allGrid = document.getElementById('all-projects-grid');
+
+      if (viewStackBtn && viewGridBtn && stackDeck && allGrid) {
+        viewStackBtn.addEventListener('click', () => {
+          viewStackBtn.classList.add('active');
+          viewGridBtn.classList.remove('active');
+          stackDeck.classList.remove('hidden');
+          allGrid.classList.add('hidden');
+          allGrid.classList.remove('grid');
+        });
+
+        viewGridBtn.addEventListener('click', () => {
+          viewGridBtn.classList.add('active');
+          viewStackBtn.classList.remove('active');
+          stackDeck.classList.add('hidden');
+          allGrid.classList.remove('hidden');
+          allGrid.classList.add('grid');
+        });
+      }
+
+      // BibTeX Citation Modal Handling
+      document.addEventListener('click', (e) => {
+        const citeBtn = e.target.closest('.cite-btn');
+        if (citeBtn) {
+          const pubId = citeBtn.getAttribute('data-cite-id');
+          const pub = PORTFOLIO_DATA.publications.find(p => p.id === pubId);
+          if (pub && pub.bibtex) {
+            openCiteModal(pub.bibtex);
+          }
+        }
+      });
+
+      const closeCiteBtn = document.getElementById('close-cite-modal');
+      const citeModal = document.getElementById('cite-modal');
+      if (closeCiteBtn && citeModal) {
+        closeCiteBtn.addEventListener('click', () => {
+          citeModal.classList.add('hidden');
+          citeModal.classList.remove('flex');
+        });
+
+        citeModal.addEventListener('click', (e) => {
+          if (e.target === citeModal) {
+            citeModal.classList.add('hidden');
+            citeModal.classList.remove('flex');
+          }
+        });
+      }
+
+      const copyCiteBtn = document.getElementById('copy-cite-btn');
+      if (copyCiteBtn) {
+        copyCiteBtn.addEventListener('click', () => {
+          const content = document.getElementById('cite-content');
+          if (content) {
+            navigator.clipboard.writeText(content.textContent).then(() => {
+              showToast('BibTeX citation copied to clipboard!');
+              copyCiteBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+              setTimeout(() => {
+                copyCiteBtn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy BibTeX';
+              }, 2000);
+            }).catch(() => {
+              showToast('Could not copy automatically. Please copy manually.');
+            });
+          }
+        });
+      }
+
+      // Copy email button handlers
+      const copyEmailBtns = document.querySelectorAll('.copy-email-btn');
+      copyEmailBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          navigator.clipboard.writeText('faizabintezaman@gmail.com').then(() => {
+            showToast('Email address copied to clipboard!');
+          });
+        });
+      });
+
+      // Contact form submission handler (Generates mailto client dispatch & toast)
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contact-name').value.trim();
+          const email = document.getElementById('contact-email').value.trim();
+          const subject = document.getElementById('contact-subject').value.trim();
+          const message = document.getElementById('contact-message').value.trim();
+
+          const mailtoUri = `mailto:faizabintezaman@gmail.com?subject=${encodeURIComponent(`[Portfolio Inquiry] ${subject}`)}&body=${encodeURIComponent(`Sender: ${name} (${email})\n\nMessage:\n${message}`)}`;
+          window.location.href = mailtoUri;
+
+          showToast('Opening your email client to send message to Faiza!');
+          contactForm.reset();
+        });
+      }
+    }
+
+    function openCiteModal(bibtex) {
+      const modal = document.getElementById('cite-modal');
+      const content = document.getElementById('cite-content');
+      if (!modal || !content) return;
+      content.textContent = bibtex;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    /* --------------------------------------------------------------------------
+       11. Toast Notification System
+       -------------------------------------------------------------------------- */
+    function showToast(message) {
+      let toast = document.getElementById('portfolio-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'portfolio-toast';
+        toast.className = 'fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 px-4 py-3 rounded-xl bg-[#253B74] text-[#E8EAF7] text-xs font-mono font-semibold shadow-2xl flex items-center gap-2 transform translate-y-16 opacity-0 transition-all duration-300 border border-[#536DA8] max-w-[90vw]';
+        document.body.appendChild(toast);
+      }
+
+      toast.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i> <span class="truncate">${message}</span>`;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 2800);
+    }
+  </script>
+</body>
+</html>

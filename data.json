@@ -1,0 +1,497 @@
+{
+    "typewriterPhrases":  [
+                              "Investigating explainable clinical risk stratification (TreeSHAP)",
+                              "Benchmarking Green Edge AI for clinical diagnosis (IEEE CSDE 2026)",
+                              "Developing deep RL for rural telemedicine networks (IEEE CSDE 2026)",
+                              "Formulating physics-informed ML for quantum networks (IEEE CSDE 2026)",
+                              "Building calibrated survival \u0026 antimicrobial resistance models",
+                              "Designing hybrid CNN-Transformers for medical diagnostics",
+                              "Engineering automated EDA \u0026 epidemiological data pipelines"
+                          ],
+    "publications":  [
+                         {
+                             "id":  "iatmsi-2025",
+                             "type":  "CONFERENCE",
+                             "year":  "2025",
+                             "venueShort":  "IATMSI",
+                             "featured":  true,
+                             "status":  "Published",
+                             "title":  "Machine Learning Models for Predicting Olympic Medal Outcomes",
+                             "authors":  "Raiyan Sayeed, Mohammed Tanvir Hassan, Md Naimur Rahman, Faiza Binte Zaman, Sabbir Ahmed, Md Saef Ullah Miah",
+                             "venue":  "Proceedings of the 2025 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI), Vol. 3, pp. 1â€“6",
+                             "tags":  [
+                                          "#Machine Learning",
+                                          "#Ensemble Models",
+                                          "#Hyperparameter Tuning"
+                                      ],
+                             "abstract":  "In this paper, the prediction of Olympic medal winners has been explored using various supervised machine learning models, utilizing historical Olympic participation and socioeconomic metrics to benchmark ensemble generalization.",
+                             "pdf":  "https://ieeexplore.ieee.org/document/10984687",
+                             "publisher":  "https://ieeexplore.ieee.org/document/10984687",
+                             "doi":  "https://doi.org/10.1109/IATMSI63197.2025.10984687",
+                             "code":  "https://github.com/wahida-binte",
+                             "bibtex":  "@inproceedings{sayeed2025machine,\n  title={Machine Learning Models for Predicting Olympic Medal Outcomes},\n  author={Sayeed, Raiyan and Hassan, Mohammed Tanvir and Rahman, Md Naimur and Zaman, Faiza Binte and Ahmed, Sabbir and Miah, Md Saef Ullah},\n  booktitle={2025 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI)},\n  volume={3},\n  pages={1--6},\n  year={2025}\n}"
+                         },
+                         {
+                             "id":  "hcii-2026",
+                             "type":  "CONFERENCE",
+                             "year":  "2026",
+                             "venueShort":  "HCII Springer",
+                             "featured":  true,
+                             "status":  "Published",
+                             "title":  "ReedMap: A Tangible Interaction System for Context-Aware and Division Based Map Navigation",
+                             "authors":  "Saif Mostasir Rohan, Tanzim Ikram Sheikh, Faiza Binte Zaman, Mustakim Ahmed, Md. Sayem Kabir, Khandaker Tabin Hasan",
+                             "venue":  "International Conference on Human-Computer Interaction (HCII 2026), Springer Nature Switzerland, pp. 445â€“461",
+                             "tags":  [
+                                          "#Human-Computer Interaction",
+                                          "#Tangible UI",
+                                          "#Embedded Systems"
+                                      ],
+                             "abstract":  "Presents a magnet-actuated tangible user interface utilizing reed switch sensor matrices to synchronize physical tokens with context-aware geographical navigation across administrative divisions.",
+                             "pdf":  "https://link.springer.com/chapter/10.1007/978-3-032-30086-7_30",
+                             "publisher":  "https://link.springer.com/chapter/10.1007/978-3-032-30086-7_30",
+                             "doi":  "https://doi.org/10.1007/978-3-032-30086-7_30",
+                             "code":  "https://github.com/wahida-binte",
+                             "bibtex":  "@inproceedings{rohan2026reedmap,\n  title={ReedMap: A Tangible Interaction System for Context-Aware and Division Based Map Navigation},\n  author={Rohan, Saif Mostasir and Sheikh, Tanzim Ikram and Zaman, Faiza Binte and Ahmed, Mustakim and Kabir, Md Sayem and Hasan, Khandaker Tabin},\n  booktitle={International Conference on Human-Computer Interaction},\n  pages={445--461},\n  year={2026},\n  publisher={Springer Nature Switzerland}\n}"
+                         },
+                         {
+                             "id":  "icca-2026",
+                             "type":  "CONFERENCE",
+                             "year":  "2026",
+                             "venueShort":  "ICCA 2026",
+                             "featured":  true,
+                             "status":  "Published",
+                             "title":  "MentalBERT++: A Dual-Representation Transformer with Attention Pooling and Multi-Task Learning for Suicide Risk Detection from Online Text",
+                             "authors":  "Hadiur Rahman Nabil, Faiza Binte Zaman, Forhan Bin Emdad, Mohammad Mahmudul Hasan, Muhammad Aminur Rahaman, Md. Rajibul Islam",
+                             "venue":  "International Conference on Computing Advancements (ICCA 2026) â€” Accepted / To Appear",
+                             "tags":  [
+                                          "#MentalBERT++",
+                                          "#Attention Pooling",
+                                          "#Multi-Task NLP"
+                                      ],
+                             "abstract":  "Formulates a dual-representation transformer architecture combining custom attention pooling and multi-task learning to improve clinical sensitivity in automated suicide risk detection from online text.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@inproceedings{nabil2026mentalbert,\n  title={MentalBERT++: A Dual-Representation Transformer with Attention Pooling and Multi-Task Learning for Suicide Risk Detection from Online Text},\n  author={Nabil, Hadiur Rahman and Zaman, Faiza Binte and Emdad, Forhan Bin and Hasan, Mohammad Mahmudul and Rahaman, Muhammad Aminur and Islam, Md Rajibul},\n  booktitle={International Conference on Computing Advancements (ICCA 2026)},\n  year={2026}\n}"
+                         },
+                         {
+                             "id":  "csde-telemed-2026",
+                             "type":  "CONFERENCE",
+                             "year":  "2026",
+                             "venueShort":  "IEEE CSDE 2026",
+                             "featured":  true,
+                             "status":  "Accepted",
+                             "title":  "Deep Reinforcement Learning for Adaptive Bitrate Control in Rural Telemedicine Networks",
+                             "authors":  "Sabbir Ahmed, Md. Naimur Rahman, Faiza Binte Zaman, Humayra Ferdous, Md. Rajibul Islam, Muhammad Aminur Rahaman",
+                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh â€” Accepted / To Appear",
+                             "tags":  [
+                                          "#Deep Reinforcement Learning",
+                                          "#Telemedicine",
+                                          "#Adaptive Bitrate",
+                                          "#Edge Healthcare"
+                                      ],
+                             "abstract":  "Formulates a deep reinforcement learning framework for real-time adaptive bitrate control and packet jitter minimization in resource-constrained rural telemedicine video communication networks.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@inproceedings{ahmed2026deep,\n  title={Deep Reinforcement Learning for Adaptive Bitrate Control in Rural Telemedicine Networks},\n  author={Ahmed, Sabbir and Rahman, Md Naimur and Zaman, Faiza Binte and Ferdous, Humayra and Islam, Md Rajibul and Rahaman, Muhammad Aminur},\n  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},\n  year={2026},\n  organization={IEEE}\n}"
+                         },
+                         {
+                             "id":  "csde-pneumonia-2026",
+                             "type":  "CONFERENCE",
+                             "year":  "2026",
+                             "venueShort":  "IEEE CSDE 2026",
+                             "featured":  true,
+                             "status":  "Accepted",
+                             "title":  "Green Edge AI for Chest X-Ray Pneumonia Diagnosis: An EADA Benchmark",
+                             "authors":  "Md. Naimur Rahman, Faiza Binte Zaman, Sabbir Ahmed, Humayra Ferdous, Md. Rajibul Islam, Muhammad Aminur Rahaman",
+                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh â€” Accepted / To Appear",
+                             "tags":  [
+                                          "#Green Edge AI",
+                                          "#Chest X-Ray",
+                                          "#Pneumonia Diagnosis",
+                                          "#EADA Benchmark"
+                                      ],
+                             "abstract":  "Establishes an Energy-Aware Diagnostic Architecture (EADA) benchmark systematically evaluating lightweight convolutional neural networks for sustainable, low-power pneumonia diagnosis on edge medical devices.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@inproceedings{rahman2026green,\n  title={Green Edge AI for Chest X-Ray Pneumonia Diagnosis: An EADA Benchmark},\n  author={Rahman, Md Naimur and Zaman, Faiza Binte and Ahmed, Sabbir and Ferdous, Humayra and Islam, Md Rajibul and Rahaman, Muhammad Aminur},\n  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},\n  year={2026},\n  organization={IEEE}\n}"
+                         },
+                         {
+                             "id":  "csde-quantum-2026",
+                             "type":  "CONFERENCE",
+                             "year":  "2026",
+                             "venueShort":  "IEEE CSDE 2026",
+                             "featured":  true,
+                             "status":  "Accepted",
+                             "title":  "Physics-Informed Machine Learning for Route Feasibility Prediction in Quantum Networks",
+                             "authors":  "Mustakim Ahmed, Faiza Binte Zaman, Md. Habibul Bashar, Sharfuddin Mahmood, Hadiur Rahman Nabil, Md. Rajibul Islam",
+                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh â€” Accepted / To Appear",
+                             "tags":  [
+                                          "#Physics-Informed ML",
+                                          "#Quantum Networks",
+                                          "#Route Feasibility",
+                                          "#PIML"
+                                      ],
+                             "abstract":  "Introduces a physics-informed machine learning architecture incorporating decoherence dynamics and quantum entanglement constraints to predict end-to-end route feasibility across distributed quantum communication networks.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@inproceedings{ahmed2026physics,\n  title={Physics-Informed Machine Learning for Route Feasibility Prediction in Quantum Networks},\n  author={Ahmed, Mustakim and Zaman, Faiza Binte and Bashar, Md Habibul and Mahmood, Sharfuddin and Nabil, Hadiur Rahman and Islam, Md Rajibul},\n  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},\n  year={2026},\n  organization={IEEE}\n}"
+                         },
+                         {
+                             "id":  "csde-2026",
+                             "type":  "CONFERENCE",
+                             "year":  "2026",
+                             "venueShort":  "IEEE CSDE 2026",
+                             "featured":  true,
+                             "status":  "Accepted",
+                             "title":  "GreenHybridECGNet: Edge-Federated CNN-Transformers for Arrhythmia Classification",
+                             "authors":  "Faiza Binte Zaman, Sabbir Ahmed, Md. Naimur Rahman, Md. Rajibul Islam, Muhammad Aminur Rahaman",
+                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh - Accepted / To Appear",
+                             "tags":  [
+                                          "#Federated Learning",
+                                          "#CNN-Transformer",
+                                          "#Edge Healthcare"
+                                      ],
+                             "abstract":  "Proposes a lightweight, privacy-preserving edge-federated hybrid CNN-Transformer framework capable of classifying cardiac arrhythmias under constrained wearable hardware envelopes.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@inproceedings{zaman2026greenhybridecgnet,\n  title={GreenHybridECGNet: Edge-Federated CNN-Transformers for Arrhythmia Classification},\n  author={Zaman, Faiza Binte and Ahmed, Sabbir and Rahman, Md Naimur and Islam, Md Rajibul and Rahaman, Muhammad Aminur},\n  booktitle={2026 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026)},\n  year={2026},\n  organization={IEEE}\n}"
+                         },
+                         {
+                             "id":  "lung-2026",
+                             "type":  "JOURNAL",
+                             "year":  "2026",
+                             "venueShort":  "Biomedical Journal",
+                             "featured":  false,
+                             "status":  "Under Review",
+                             "title":  "Automated Lung Cancer Classification from Histopathological Images: An Intelligent Diagnostic Approach",
+                             "authors":  "Fariya Sultana Prity, Faiza Binte Zaman, Mahamodul Hasan Mahadi, Md Rakibul Islam",
+                             "venue":  "Biomedical Journal (Under Peer Review, 2026)",
+                             "tags":  [
+                                          "#Histopathology",
+                                          "#Deep Learning",
+                                          "#Medical Imaging"
+                                      ],
+                             "abstract":  "Develops a deep learning diagnostic pipeline for high-precision multi-class classification of pulmonary malignancies from stained histopathological whole-slide image patches.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@article{prity2026lung,\n  title={Automated Lung Cancer Classification from Histopathological Images: An Intelligent Diagnostic Approach},\n  author={Prity, Fariya Sultana and Zaman, Faiza Binte and Mahadi, Mahamodul Hasan and Islam, Md Rakibul},\n  journal={Biomedical Journal},\n  year={2026}\n}"
+                         },
+                         {
+                             "id":  "fed-ojcs-2026",
+                             "type":  "JOURNAL",
+                             "year":  "2026",
+                             "venueShort":  "IEEE OJCS",
+                             "featured":  false,
+                             "status":  "Under Review",
+                             "title":  "Secure Intelligence at Scale: Federated Learning for Next-Generation Healthcare AI",
+                             "authors":  "Fariya Sultana Prity, Faiza Binte Zaman, Sheikh Rifat, Md. Mahadi Hasan, Tze Hui Liew",
+                             "venue":  "IEEE Open Journal of the Computer Society (Under Review, 2026)",
+                             "tags":  [
+                                          "#Federated Learning",
+                                          "#Healthcare Privacy",
+                                          "#Distributed AI"
+                                      ],
+                             "abstract":  "Investigates decentralized federated optimization protocols and cryptographic privacy guarantees for multi-institutional clinical model training.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@article{prity2026secure,\n  title={Secure Intelligence at Scale: Federated Learning for Next-Generation Healthcare AI},\n  author={Prity, Fariya Sultana and Zaman, Faiza Binte and Rifat, Sheikh and Hasan, Md Mahadi and Liew, Tze Hui},\n  journal={IEEE Open Journal of the Computer Society},\n  year={2026}\n}"
+                         },
+                         {
+                             "id":  "caption-2026",
+                             "type":  "JOURNAL",
+                             "year":  "2026",
+                             "venueShort":  "CAEAI",
+                             "featured":  false,
+                             "status":  "Under Review",
+                             "title":  "A Comprehensive Review of Generative AI for Image Captioning",
+                             "authors":  "Faiza Binte Zaman, Jinia Sultana Sama, Rufaida Mamun, et al.",
+                             "venue":  "Computers and Education: Artificial Intelligence (Under Review, 2026)",
+                             "tags":  [
+                                          "#Generative AI",
+                                          "#Vision-Language",
+                                          "#Transformers"
+                                      ],
+                             "abstract":  "Synthesizes architectural advancements in vision-language transformers, cross-modal attention, and generative decoding strategies for automated image and clinical report captioning.",
+                             "pdf":  "",
+                             "publisher":  "",
+                             "doi":  "",
+                             "code":  "",
+                             "bibtex":  "@article{zaman2026review,\n  title={A Comprehensive Review of Generative AI for Image Captioning},\n  author={Zaman, Faiza Binte and Sama, Jinia Sultana and Mamun, Rufaida},\n  journal={Computers and Education: Artificial Intelligence},\n  year={2026}\n}"
+                         }
+                     ],
+    "projects":  [
+                     {
+                         "title":  "Fetal Distress Risk Stratification from Cardiotocography",
+                         "tag":  "CLINICAL XAI",
+                         "headline":  "Explainable 3-Tier Fetal Compromise Triage",
+                         "metricHighlight":  "0.9854 Macro ROC-AUC  |  93.93% Accuracy  |  2,126 CTG Recordings",
+                         "summary":  "Explainable three-tier fetal risk stratification (Normal / Suspect / Pathological) from 21 cardiotocography features using class-weighted LightGBM and 5-fold stratified cross-validation.",
+                         "challenge":  "Clinical CTG cohorts suffer from severe class imbalance (only 8.3% Pathological), where false negatives risk fetal compromise and black-box predictions lack obstetric trust.",
+                         "tech":  [
+                                      "Python",
+                                      "LightGBM",
+                                      "TreeSHAP",
+                                      "Scikit-learn",
+                                      "Stratified CV",
+                                      "Pytest"
+                                  ],
+                         "github":  "https://github.com/wahida-binte/fetal-distress-risk-stratification",
+                         "demo":  ""
+                     },
+                     {
+                         "title":  "AutoVisCheck: Intelligent EDA \u0026 Audit Platform",
+                         "tag":  "DATA SYSTEMS",
+                         "headline":  "Automated EDA \u0026 Misleading-Chart Risk Scorer",
+                         "metricHighlight":  "4-Stage Workflow  |  5 Imputation Engines  |  Replayable Op-Log",
+                         "summary":  "Interactive Streamlit web application guiding users through cleaning, column-type-aware visualization, automated statistical interpretation, and exportable HTML/Markdown reporting.",
+                         "challenge":  "Manual exploratory data analysis is prone to irreversible cleaning mistakes and visually deceptive chart configurations (e.g., truncated axes or unnormalized group comparisons).",
+                         "tech":  [
+                                      "Streamlit",
+                                      "Plotly",
+                                      "Pandas",
+                                      "NumPy",
+                                      "Pytest",
+                                      "GitHub Actions CI"
+                                  ],
+                         "github":  "https://github.com/wahida-binte/autovischeck",
+                         "demo":  ""
+                     },
+                     {
+                         "title":  "Explainable ML for Antimicrobial Resistance (AMR)",
+                         "tag":  "BIOMEDICAL ML",
+                         "headline":  "Ciprofloxacin Resistance Prediction in E. coli",
+                         "metricHighlight":  "10,204 Validated Isolates  |  0.7974 ROC-AUC  |  DRIAMS-A Cohort",
+                         "summary":  "End-to-end clinical machine learning pipeline predicting fluoroquinolone non-susceptibility in Escherichia coli using longitudinal hospital mass-spectra metadata (2015â€“2018).",
+                         "challenge":  "Raw clinical susceptibility registries contain 41 co-tested antibiotic outcomes that induce severe shortcut learning if not systematically purged prior to gradient boosting.",
+                         "tech":  [
+                                      "Python",
+                                      "XGBoost",
+                                      "TreeSHAP",
+                                      "DRIAMS Dataset",
+                                      "Cost-Sensitive Learning"
+                                  ],
+                         "github":  "https://github.com/wahida-binte",
+                         "demo":  ""
+                     },
+                     {
+                         "title":  "Sepsis Survival XAI: Calibrated Mortality Benchmark",
+                         "tag":  "CLINICAL CALIBRATION",
+                         "headline":  "Platt-Calibrated In-Hospital Sepsis Mortality",
+                         "metricHighlight":  "110,204 Admissions  |  Brier 0.223 â†’ 0.066  |  500x Bootstrap CI",
+                         "summary":  "Reproducible benchmark predicting in-hospital sepsis mortality from minimal clinical records using imbalance-aware XGBoost, sigmoid calibration, and patient-level SHAP waterfall audit trails.",
+                         "challenge":  "Standard cost-sensitive boosting (scale_pos_weight) heavily distorts predicted probabilities on 7.35% mortality cohorts, requiring post-hoc Platt scaling on a dedicated validation split.",
+                         "tech":  [
+                                      "XGBoost",
+                                      "Platt Calibration",
+                                      "SHAP Waterfall",
+                                      "Bootstrap CIs",
+                                      "Scikit-learn"
+                                  ],
+                         "github":  "https://github.com/wahida-binte",
+                         "demo":  ""
+                     },
+                     {
+                         "title":  "Pediatric Immunization Surveillance \u0026 Dropout BI",
+                         "tag":  "EPIDEMIOLOGY BI",
+                         "headline":  "Global WUENIC Vaccine Trajectory \u0026 Dropout Suite",
+                         "metricHighlight":  "195 Countries  |  16 Antigens  |  58,080 Fact Cells (2000â€“2023)",
+                         "summary":  "Star-schema Power BI analytics platform and SQLite relational ETL pipeline tracking childhood immunization coverage, DTP1-to-DTP3 retention bottlenecks, and COVID-19 delivery shocks.",
+                         "challenge":  "Global WHO/UNICEF registries are distributed across fragmented wide-format Excel matrices, requiring automated unpivoting and DAX measures to isolate pandemic-era coverage drops.",
+                         "tech":  [
+                                      "Power BI",
+                                      "DAX",
+                                      "Star Schema",
+                                      "Python ETL",
+                                      "SQLite",
+                                      "Plotly"
+                                  ],
+                         "github":  "https://github.com/wahida-binte/pediatric-immunization-surveillance",
+                         "demo":  ""
+                     },
+                     {
+                         "title":  "SARS-CoV-2 Genomic Variant Clustering via k-mers",
+                         "tag":  "BIOINFORMATICS",
+                         "headline":  "Alignment-Free Viral Clade Discovery",
+                         "metricHighlight":  "~30,000 SARS-CoV-2 Genomes  |  341 k-mer Features  |  Log2 Fold-Change",
+                         "summary":  "Unsupervised genomic clustering of ~30k viral sequences using 1- to 4-mer frequency spectra, PCA dimensionality reduction, MiniBatchKMeans, and XGBoost motif importance.",
+                         "challenge":  "Multiple sequence alignment across tens of thousands of full viral genomes is computationally expensive; k-mer frequency spectra enable rapid alignment-free motif profiling.",
+                         "tech":  [
+                                      "Scikit-learn",
+                                      "PCA",
+                                      "MiniBatchKMeans",
+                                      "XGBoost",
+                                      "Genomics",
+                                      "Python"
+                                  ],
+                         "github":  "https://github.com/wahida-binte",
+                         "demo":  ""
+                     },
+                     {
+                         "title":  "Real-Time CNN Face Recognition Pipeline",
+                         "tag":  "COMPUTER VISION",
+                         "headline":  "Live Video Facial Feature Extraction \u0026 Classification",
+                         "metricHighlight":  "End-to-End Custom Dataset  |  OpenCV + TensorFlow CNN",
+                         "summary":  "Constructed a custom labeled facial dataset, applied OpenCV spatial preprocessing, and trained a convolutional neural network for real-time identity inference on live video streams.",
+                         "challenge":  "Maintaining low-latency frame rates and classification stability under varying ambient lighting and camera angles during live webcam inference.",
+                         "tech":  [
+                                      "Python",
+                                      "TensorFlow",
+                                      "CNN",
+                                      "OpenCV",
+                                      "Real-Time Video"
+                                  ],
+                         "github":  "https://github.com/wahida-binte",
+                         "demo":  ""
+                     },
+                     {
+                         "title":  "Cart Crush: Retail \u0026 Financial Inventory ERP",
+                         "tag":  "ENTERPRISE SOFTWARE",
+                         "headline":  "Relational Retail Management \u0026 Document Automation",
+                         "metricHighlight":  "C# .NET Framework  |  SQL Server  |  Automated Receipts",
+                         "summary":  "Full-featured retail management platform integrating normalized SQL Server operations, inventory tracking, financial record auditing, and automated email/receipt generation.",
+                         "challenge":  "Ensuring transactional consistency across concurrent inventory updates, billing calculations, and automated receipt dispatch.",
+                         "tech":  [
+                                      "C#",
+                                      ".NET Framework",
+                                      "SQL Server",
+                                      "MVC Architecture"
+                                  ],
+                         "github":  "",
+                         "demo":  ""
+                     }
+                 ],
+    "journey":  [
+                    {
+                        "company":  "ELITE Research Lab LLC",
+                        "location":  "17018 Cedarcraft Rd, Queens, NY, USA",
+                        "logoIcon":  "fa-solid fa-layer-group",
+                        "logoBg":  "from-[#253B74] to-[#536DA8]",
+                        "role":  "Research Assistant",
+                        "period":  "July 2025 - Present",
+                        "badges":  [
+                                       "Contractual",
+                                       "Remote (USA)"
+                                   ],
+                        "description":  "Research Assistant contributing to ongoing machine learning and Explainable AI (XAI) research projects, leading literature synthesis, experimental benchmarking, HeartSense 98.15 classifier development (98.15% accuracy on Statlog Heart), SHAP interpretability, and LaTeX manuscript preparation.",
+                        "skills":  [
+                                       "Python",
+                                       "Machine Learning",
+                                       "Explainable AI (SHAP)",
+                                       "Scikit-learn",
+                                       "Pandas",
+                                       "NumPy",
+                                       "Jupyter Notebook",
+                                       "LaTeX",
+                                       "Data Analysis",
+                                       "Research Methodology"
+                                   ]
+                    },
+                    {
+                        "company":  "Advanced Machine Intelligence Research Lab (AMIR Lab)",
+                        "location":  "Dhaka, Bangladesh",
+                        "logoIcon":  "fa-solid fa-brain",
+                        "logoBg":  "from-[#253B74] to-[#536DA8]",
+                        "role":  "Research Intern",
+                        "period":  "Jan 2026 - June 2026",
+                        "badges":  [
+                                       "Research Group",
+                                       "Hybrid / Remote",
+                                       "Completed"
+                                   ],
+                        "description":  "Executed deep learning research milestones on histopathological lung cancer image classification and generative vision-language transformers for automated medical reporting.",
+                        "skills":  [
+                                       "Deep Learning",
+                                       "PyTorch",
+                                       "TensorFlow",
+                                       "Histopathology",
+                                       "Transformers",
+                                       "Medical Imaging",
+                                       "Academic Writing"
+                                   ]
+                    },
+                    {
+                        "company":  "American International University-Bangladesh (AIUB)",
+                        "location":  "Department of Computer Science, Dhaka, Bangladesh",
+                        "logoIcon":  "fa-solid fa-building-columns",
+                        "logoBg":  "from-[#253B74] to-[#536DA8]",
+                        "role":  "Student Assistant, Intern",
+                        "period":  "July 2025 - Oct 2025",
+                        "badges":  [
+                                       "On-Site",
+                                       "Academic Dept"
+                                   ],
+                        "description":  "Supported faculty and students with course registration protocols, academic advising, confidential record management, and operational coordination during university seminars and orientations.",
+                        "skills":  [
+                                       "Academic Advising",
+                                       "Operations",
+                                       "Documentation",
+                                       "Database Records",
+                                       "Team Coordination"
+                                   ]
+                    }
+                ],
+    "education":  [
+                      {
+                          "degree":  "Master of Science in Computer Science (M.Sc. CS)",
+                          "school":  "American International University-Bangladesh (AIUB)",
+                          "period":  "Jan 2026 - Present",
+                          "badge":  "CGPA: 3.80 / 4.00",
+                          "focus":  "Specializations: Deep Learning, Explainable AI (XAI), Medical Image Classification, Systems Design \u0026 Advanced Information Architecture."
+                      },
+                      {
+                          "degree":  "Bachelor of Science in Computer Science \u0026 Engineering (B.Sc. CSE)",
+                          "school":  "American International University-Bangladesh (AIUB)",
+                          "period":  "Jan 2022 - Dec 2025",
+                          "badge":  "CGPA: 3.89 / 4.00",
+                          "focus":  "Honors: Academic Scholarship for Excellence \u0026 4x Dean\u0027s List Honors (Spring 2023â€“2024, Fall 2023â€“2024, Spring 2024â€“2025, Fall 2024â€“2025)."
+                      }
+                  ],
+    "skills":  {
+                   "Machine Learning \u0026 XAI":  [
+                                                       "Python",
+                                                       "PyTorch",
+                                                       "TensorFlow",
+                                                       "LightGBM",
+                                                       "XGBoost",
+                                                       "Scikit-learn",
+                                                       "SHAP",
+                                                       "OpenCV"
+                                                   ],
+                   "Data Engineering \u0026 BI":  [
+                                                      "Pandas",
+                                                      "NumPy",
+                                                      "SQL Server",
+                                                      "MySQL",
+                                                      "SQLite",
+                                                      "Power BI",
+                                                      "DAX",
+                                                      "Streamlit",
+                                                      "Plotly"
+                                                  ],
+                   "Systems \u0026 Languages":  [
+                                                    "C++",
+                                                    "C#",
+                                                    "Java",
+                                                    ".NET Framework",
+                                                    "R",
+                                                    "JavaScript",
+                                                    "HTML5/CSS3",
+                                                    "LaTeX",
+                                                    "Git"
+                                                ]
+               }
+}

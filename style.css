@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   COLOR SYSTEM:
+   - Midnight Velvet: #253B74 (Core accent & brand surface)
+   - Deep Midnight Canvas: #0C1326 (Background)
+   - Midnight Card: #121C38 (Surface)
+   - Midnight Elevated: #1A274E (Hover & elevated panels)
+   - Royal Blue: #536DA8 (Interactive accents, borders, icons)
+   - Velvet Cream: #E8EAF7 (Headings, primary typography, highlights)
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0C1326;
+  color: #E8EAF7;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Subtle dot/grid background in Royal Blue tone */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(83, 109, 168, 0.22) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Blinking terminal cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* Publication filter tabs */
+.pub-tab {
+  transition: all 0.25s ease;
+  background-color: #121C38;
+  color: #B8BDE0;
+  border: 1px solid rgba(83, 109, 168, 0.3);
+}
+.pub-tab:hover {
+  color: #E8EAF7;
+  border-color: #536DA8;
+  background-color: #1A274E;
+}
+.pub-tab.active {
+  background-color: #253B74;
+  color: #E8EAF7;
+  border-color: #536DA8;
+  box-shadow: 0 0 16px rgba(83, 109, 168, 0.35);
+}
+
+/* Professional card hover refinement */
+.pro-card {
+  background-color: rgba(18, 28, 56, 0.95);
+  border-color: rgba(37, 59, 116, 0.7);
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pro-card:hover {
+  border-color: rgba(83, 109, 168, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px -12px rgba(37, 59, 116, 0.5);
+}
+
+/* Primary velvet button style */
+.btn-midnight {
+  background-color: #253B74;
+  color: #E8EAF7;
+  border: 1px solid rgba(83, 109, 168, 0.5);
+  box-shadow: 0 8px 20px -6px rgba(37, 59, 116, 0.5);
+  transition: all 0.25s ease;
+}
+.btn-midnight:hover {
+  background-color: #536DA8;
+  color: #FFFFFF;
+  border-color: #8FA4D4;
+  box-shadow: 0 10px 24px -6px rgba(83, 109, 168, 0.6);
+}
+
+/* Secondary surface button style */
+.btn-surface {
+  background-color: #121C38;
+  color: #E8EAF7;
+  border: 1px solid rgba(83, 109, 168, 0.35);
+  transition: all 0.25s ease;
+}
+.btn-surface:hover {
+  background-color: #1A274E;
+  border-color: #536DA8;
+  color: #FFFFFF;
+}
+
+/* Custom scrollbar in Midnight Velvet & Royal Blue */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0C1326;
+}
+::-webkit-scrollbar-thumb {
+  background: #253B74;
+  border-radius: 4px;
+  border: 2px solid #0C1326;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #536DA8;
+}
+
+/* Selection highlight in Midnight Velvet & Velvet Cream */
+::selection {
+  background-color: #253B74;
+  color: #E8EAF7;
+}
