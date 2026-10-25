@@ -838,7 +838,7 @@
         <div class="flex items-center gap-2 self-start sm:self-end">
           <button id="view-stack-btn" class="proj-view-btn active px-3 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 shadow-sm">
             <i class="fa-solid fa-layer-group text-[11px]"></i>
-            <span>Stack Deck (8)</span>
+            <span id="proj-stack-count">Stack Deck (9)</span>
           </button>
           <button id="view-grid-btn" class="proj-view-btn px-3 py-1.5 rounded-lg text-xs font-mono transition flex items-center gap-1.5 shadow-sm">
             <i class="fa-solid fa-table-cells-large text-[11px]"></i>
@@ -1384,6 +1384,18 @@
           "github": "https://github.com/wahida-binte"
         },
         {
+          "id": "haunted-theme-park",
+          "title": "Haunted Theme Park: Interactive 2D OpenGL Simulation",
+          "tag": "COMPUTER GRAPHICS",
+          "category": "graphics",
+          "headline": "Animated Day-Night Cycle & Interactive Carnival Simulation in C++",
+          "metricHighlight": "C++ & OpenGL/GLUT · Real-Time Day-Night Transition · Procedural Animations",
+          "summary": "Built an interactive 2D animated theme park simulation in C++ using OpenGL and the GLUT graphics library. The simulation features synchronized day-and-night cycles, procedural ride animations (Ferris wheel, carousel, and drop tower), a flowing river with boat traffic, and dynamic behavioral transitions between daytime park-goers and nighttime ghostly transformations.",
+          "challenge": "Coordinating multiple simultaneous rendering loops—such as independent rotational speeds for rides, water ripple physics, and seamless palette shifts between daytime and haunted night scenes—required efficient state management within GLUT's idle and timer callbacks without dropping frame rates.",
+          "tech": ["C++", "OpenGL", "GLUT", "Code::Blocks", "Computer Graphics", "State Machines"],
+          "github": "https://github.com/wahida-binte/Haunted-Theme-Park"
+        },
+        {
           "id": "cartcrush-erp",
           "title": "Cart Crush: Retail & Financial Inventory ERP",
           "tag": "ENTERPRISE SOFTWARE",
@@ -1464,6 +1476,7 @@
         ],
         "Systems & Languages": [
           { "name": "C++", "icon": "fa-solid fa-code" },
+          { "name": "OpenGL", "icon": "fa-solid fa-cube" },
           { "name": "C#", "icon": "fa-brands fa-microsoft" },
           { "name": "Java", "icon": "fa-brands fa-java" },
           { "name": ".NET Framework", "icon": "fa-solid fa-cubes" },
@@ -1747,6 +1760,9 @@
       const container = document.getElementById('project-stack-deck');
       if (!container || !projects || !projects.length) return;
 
+      const stackCountBtn = document.getElementById('proj-stack-count');
+      if (stackCountBtn) stackCountBtn.textContent = `Stack Deck (${projects.length})`;
+
       container.innerHTML = projects.map((p, idx) => {
         // Desktop top offset steps down by 8px, creating an elegant layered card deck rim
         const desktopOffset = idx * 8;
@@ -1766,7 +1782,7 @@
                   <span>${p.tag}</span>
                 </span>
                 <span class="text-[11px] sm:text-xs font-mono font-bold text-[#536DA8] dark:text-[#8FA4D4] whitespace-nowrap">
-                  Pipeline 0${idx + 1} <span class="theme-text-muted font-normal">/ 08</span>
+                  Pipeline ${String(idx + 1).padStart(2, '0')} <span class="theme-text-muted font-normal">/ ${String(projects.length).padStart(2, '0')}</span>
                 </span>
               </div>
 
@@ -1848,7 +1864,7 @@
                   `}
 
                   <span class="text-[11px] font-mono text-[#536DA8] dark:text-[#8FA4D4] font-semibold">
-                    System #0${idx + 1}
+                    System #${String(idx + 1).padStart(2, '0')}
                   </span>
                 </div>
               </div>
@@ -1873,7 +1889,7 @@
               <span class="px-2.5 py-0.5 rounded-md bg-[#253B74] text-[#E8EAF7] text-[10px] font-mono font-bold uppercase">
                 ${p.tag}
               </span>
-              <span class="text-xs font-mono theme-text-muted font-bold">#0${idx + 1}</span>
+              <span class="text-xs font-mono theme-text-muted font-bold">#${String(idx + 1).padStart(2, '0')}</span>
             </div>
 
             <div>

@@ -346,6 +346,19 @@ const PORTFOLIO_DATA = {
       "demo": ""
     },
     {
+      "id": "haunted-theme-park",
+      "title": "Haunted Theme Park: Interactive 2D OpenGL Simulation",
+      "tag": "COMPUTER GRAPHICS",
+      "category": "graphics",
+      "headline": "Animated Day-Night Cycle & Interactive Carnival Simulation in C++",
+      "metricHighlight": "C++ & OpenGL/GLUT · Real-Time Day-Night Transition · Procedural Animations",
+      "summary": "Built an interactive 2D animated theme park simulation in C++ using OpenGL and the GLUT graphics library. The simulation features synchronized day-and-night cycles, procedural ride animations (Ferris wheel, carousel, and drop tower), a flowing river with boat traffic, and dynamic behavioral transitions between daytime park-goers and nighttime ghostly transformations.",
+      "challenge": "Coordinating multiple simultaneous rendering loops—such as independent rotational speeds for rides, water ripple physics, and seamless palette shifts between daytime and haunted night scenes—required efficient state management within GLUT's idle and timer callbacks without dropping frame rates.",
+      "tech": ["C++", "OpenGL", "GLUT", "Code::Blocks", "Computer Graphics", "State Machines"],
+      "github": "https://github.com/wahida-binte/Haunted-Theme-Park",
+      "demo": ""
+    },
+    {
       "id": "cartcrush-erp",
       "title": "Cart Crush: Retail & Financial Inventory ERP",
       "tag": "ENTERPRISE SOFTWARE",
@@ -429,6 +442,7 @@ const PORTFOLIO_DATA = {
     ],
     "Systems & Languages": [
       { "name": "C++", "icon": "fa-solid fa-code" },
+      { "name": "OpenGL", "icon": "fa-solid fa-cube" },
       { "name": "C#", "icon": "fa-brands fa-microsoft" },
       { "name": "Java", "icon": "fa-brands fa-java" },
       { "name": ".NET Framework", "icon": "fa-solid fa-cubes" },
