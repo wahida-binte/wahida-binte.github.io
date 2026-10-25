@@ -342,7 +342,7 @@ const PORTFOLIO_DATA = {
       "summary": "Built an end-to-end computer vision system for real-time face detection and recognition from live webcam feeds. Collected and preprocessed a custom facial dataset with OpenCV, then trained a compact convolutional neural network optimized for fast inference on modest hardware.",
       "challenge": "Live video feeds suffer from fluctuating room lighting, motion blur, and slight face angles. I added data augmentation during training (random brightness, rotation, and zooming) and frame-averaging during inference to keep predictions steady.",
       "tech": ["Python", "TensorFlow", "CNN", "OpenCV", "Real-Time Video"],
-      "github": "https://github.com/wahida-binte",
+      "github": "",
       "demo": ""
     },
     {
