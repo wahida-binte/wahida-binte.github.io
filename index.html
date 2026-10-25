@@ -1440,9 +1440,6 @@
           "icon": "fa-solid fa-award"
         }
       ],
-          "icon": "fa-solid fa-award"
-        }
-      ],
       "skills": {
         "Machine Learning & XAI": [
           { "name": "Python", "icon": "fa-brands fa-python" },
@@ -1484,11 +1481,16 @@
     let currentPubSearch = '';
     let isPubStackMode = true;
 
-    // Initialize application on DOM load
-    document.addEventListener('DOMContentLoaded', () => {
+    // Initialize application on DOM load or immediately if already ready
+    function runInit() {
       initTheme();
       initPortfolio();
-    });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', runInit);
+    } else {
+      runInit();
+    }
 
     /* --------------------------------------------------------------------------
        1. Theme Engine (Light / Dark Mode Persistence)
