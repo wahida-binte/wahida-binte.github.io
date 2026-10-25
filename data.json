@@ -1,4 +1,4 @@
-{
+﻿{
     "typewriterPhrases":  [
                               "Investigating explainable clinical risk stratification (TreeSHAP)",
                               "Benchmarking Green Edge AI for clinical diagnosis (IEEE CSDE 2026)",
@@ -18,7 +18,7 @@
                              "status":  "Published",
                              "title":  "Machine Learning Models for Predicting Olympic Medal Outcomes",
                              "authors":  "Raiyan Sayeed, Mohammed Tanvir Hassan, Md Naimur Rahman, Faiza Binte Zaman, Sabbir Ahmed, Md Saef Ullah Miah",
-                             "venue":  "Proceedings of the 2025 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI), Vol. 3, pp. 1â€“6",
+                             "venue":  "Proceedings of the 2025 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI), Vol. 3, pp. 1Ã¢â‚¬â€œ6",
                              "tags":  [
                                           "#Machine Learning",
                                           "#Ensemble Models",
@@ -40,7 +40,7 @@
                              "status":  "Published",
                              "title":  "ReedMap: A Tangible Interaction System for Context-Aware and Division Based Map Navigation",
                              "authors":  "Saif Mostasir Rohan, Tanzim Ikram Sheikh, Faiza Binte Zaman, Mustakim Ahmed, Md. Sayem Kabir, Khandaker Tabin Hasan",
-                             "venue":  "International Conference on Human-Computer Interaction (HCII 2026), Springer Nature Switzerland, pp. 445â€“461",
+                             "venue":  "International Conference on Human-Computer Interaction (HCII 2026), Springer Nature Switzerland, pp. 445Ã¢â‚¬â€œ461",
                              "tags":  [
                                           "#Human-Computer Interaction",
                                           "#Tangible UI",
@@ -62,7 +62,7 @@
                              "status":  "Published",
                              "title":  "MentalBERT++: A Dual-Representation Transformer with Attention Pooling and Multi-Task Learning for Suicide Risk Detection from Online Text",
                              "authors":  "Hadiur Rahman Nabil, Faiza Binte Zaman, Forhan Bin Emdad, Mohammad Mahmudul Hasan, Muhammad Aminur Rahaman, Md. Rajibul Islam",
-                             "venue":  "International Conference on Computing Advancements (ICCA 2026) â€” Accepted / To Appear",
+                             "venue":  "International Conference on Computing Advancements (ICCA 2026) Ã¢â‚¬â€ Accepted / To Appear",
                              "tags":  [
                                           "#MentalBERT++",
                                           "#Attention Pooling",
@@ -84,7 +84,7 @@
                              "status":  "Accepted",
                              "title":  "Deep Reinforcement Learning for Adaptive Bitrate Control in Rural Telemedicine Networks",
                              "authors":  "Sabbir Ahmed, Md. Naimur Rahman, Faiza Binte Zaman, Humayra Ferdous, Md. Rajibul Islam, Muhammad Aminur Rahaman",
-                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh â€” Accepted / To Appear",
+                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh Ã¢â‚¬â€ Accepted / To Appear",
                              "tags":  [
                                           "#Deep Reinforcement Learning",
                                           "#Telemedicine",
@@ -107,7 +107,7 @@
                              "status":  "Accepted",
                              "title":  "Green Edge AI for Chest X-Ray Pneumonia Diagnosis: An EADA Benchmark",
                              "authors":  "Md. Naimur Rahman, Faiza Binte Zaman, Sabbir Ahmed, Humayra Ferdous, Md. Rajibul Islam, Muhammad Aminur Rahaman",
-                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh â€” Accepted / To Appear",
+                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh Ã¢â‚¬â€ Accepted / To Appear",
                              "tags":  [
                                           "#Green Edge AI",
                                           "#Chest X-Ray",
@@ -130,7 +130,7 @@
                              "status":  "Accepted",
                              "title":  "Physics-Informed Machine Learning for Route Feasibility Prediction in Quantum Networks",
                              "authors":  "Mustakim Ahmed, Faiza Binte Zaman, Md. Habibul Bashar, Sharfuddin Mahmood, Hadiur Rahman Nabil, Md. Rajibul Islam",
-                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh â€” Accepted / To Appear",
+                             "venue":  "Proceedings of the 11th IEEE Asia-Pacific Conference on Computer Science and Data Engineering (IEEE CSDE 2026), Cox\u0027s Bazar, Bangladesh Ã¢â‚¬â€ Accepted / To Appear",
                              "tags":  [
                                           "#Physics-Informed ML",
                                           "#Quantum Networks",
@@ -237,10 +237,10 @@
                      {
                          "title":  "Fetal Distress Risk Stratification from Cardiotocography",
                          "tag":  "CLINICAL XAI",
-                         "headline":  "Explainable 3-Tier Fetal Compromise Triage",
-                         "metricHighlight":  "0.9854 Macro ROC-AUC  |  93.93% Accuracy  |  2,126 CTG Recordings",
-                         "summary":  "Explainable three-tier fetal risk stratification (Normal / Suspect / Pathological) from 21 cardiotocography features using class-weighted LightGBM and 5-fold stratified cross-validation.",
-                         "challenge":  "Clinical CTG cohorts suffer from severe class imbalance (only 8.3% Pathological), where false negatives risk fetal compromise and black-box predictions lack obstetric trust.",
+                         "headline":  "Cardiotocography Fetal Risk Classification \u0026 SHAP Explanations",
+                         "metricHighlight":  "0.9854 Macro ROC-AUC · 93.93% Accuracy across 2,126 recordings",
+                         "summary":  "Developed an explainable machine learning model to classify fetal health into Normal, Suspect, or Pathological states using 21 cardiotocography features. Applied class-weighted LightGBM with 5-fold cross-validation and TreeSHAP to make model decisions transparent and clinically interpretable for doctors.",
+                         "challenge":  "The clinical dataset had severe class imbalance, with only 8.3% pathological cases. Standard classifiers favored the majority class, so I used class weighting and probability threshold tuning to minimize dangerous false negatives without hurting overall specificity.",
                          "tech":  [
                                       "Python",
                                       "LightGBM",
@@ -255,10 +255,10 @@
                      {
                          "title":  "AutoVisCheck: Intelligent EDA \u0026 Audit Platform",
                          "tag":  "DATA SYSTEMS",
-                         "headline":  "Automated EDA \u0026 Misleading-Chart Risk Scorer",
-                         "metricHighlight":  "4-Stage Workflow  |  5 Imputation Engines  |  Replayable Op-Log",
-                         "summary":  "Interactive Streamlit web application guiding users through cleaning, column-type-aware visualization, automated statistical interpretation, and exportable HTML/Markdown reporting.",
-                         "challenge":  "Manual exploratory data analysis is prone to irreversible cleaning mistakes and visually deceptive chart configurations (e.g., truncated axes or unnormalized group comparisons).",
+                         "headline":  "Interactive Exploratory Data Analysis \u0026 Chart Validation Tool",
+                         "metricHighlight":  "4-Stage Guided Workflow · 5 Smart Imputation Modes · Replayable Operation Log",
+                         "summary":  "Built an interactive Streamlit app that walks users through data cleaning, smart exploratory data analysis, and chart sanity-checking. It automatically detects column data types, suggests appropriate statistical summaries, and flags common visualization flaws like truncated axes before generating exportable reports.",
+                         "challenge":  "Many exploratory tools either make destructive modifications to raw datasets or generate misleading visualizations. I designed a non-destructive pipeline with a replayable operation history so users can review, audit, or revert every data transformation step.",
                          "tech":  [
                                       "Streamlit",
                                       "Plotly",
@@ -273,10 +273,10 @@
                      {
                          "title":  "Explainable ML for Antimicrobial Resistance (AMR)",
                          "tag":  "BIOMEDICAL ML",
-                         "headline":  "Ciprofloxacin Resistance Prediction in E. coli",
-                         "metricHighlight":  "10,204 Validated Isolates  |  0.7974 ROC-AUC  |  DRIAMS-A Cohort",
-                         "summary":  "End-to-end clinical machine learning pipeline predicting fluoroquinolone non-susceptibility in Escherichia coli using longitudinal hospital mass-spectra metadata (2015â€“2018).",
-                         "challenge":  "Raw clinical susceptibility registries contain 41 co-tested antibiotic outcomes that induce severe shortcut learning if not systematically purged prior to gradient boosting.",
+                         "headline":  "Predicting Ciprofloxacin Resistance in E. coli",
+                         "metricHighlight":  "10,204 Clinical Isolates · 0.7974 ROC-AUC · DRIAMS-A Cohort",
+                         "summary":  "Built a machine learning pipeline to predict ciprofloxacin resistance in E. coli from mass-spectrometry clinical records spanning 2015 to 2018. Used XGBoost and TreeSHAP to identify which laboratory features most strongly signal drug resistance, providing interpretable insights for antibiotic stewardship.",
+                         "challenge":  "Clinical hospital records often contain co-tested antibiotic results that leak the target label into the feature space. I designed a strict data sanitization step that stripped out target-correlated testing artifacts before training to ensure the model learned genuine biological markers.",
                          "tech":  [
                                       "Python",
                                       "XGBoost",
@@ -290,10 +290,10 @@
                      {
                          "title":  "Sepsis Survival XAI: Calibrated Mortality Benchmark",
                          "tag":  "CLINICAL CALIBRATION",
-                         "headline":  "Platt-Calibrated In-Hospital Sepsis Mortality",
-                         "metricHighlight":  "110,204 Admissions  |  Brier 0.223 â†’ 0.066  |  500x Bootstrap CI",
-                         "summary":  "Reproducible benchmark predicting in-hospital sepsis mortality from minimal clinical records using imbalance-aware XGBoost, sigmoid calibration, and patient-level SHAP waterfall audit trails.",
-                         "challenge":  "Standard cost-sensitive boosting (scale_pos_weight) heavily distorts predicted probabilities on 7.35% mortality cohorts, requiring post-hoc Platt scaling on a dedicated validation split.",
+                         "headline":  "Well-Calibrated Sepsis Mortality Risk Prediction",
+                         "metricHighlight":  "110,204 Patient Records · Brier Score Reduced from 0.223 to 0.066",
+                         "summary":  "Created a calibrated risk prediction model to estimate in-hospital sepsis mortality from routine clinical variables. Combined gradient boosting with Platt scaling to deliver reliable risk probabilities rather than raw uncalibrated scores, paired with individual patient SHAP waterfall charts.",
+                         "challenge":  "Raw boosting models often output extreme, poorly calibrated probability estimates when trained on low-prevalence outcomes (under 8% mortality). I used Platt scaling on a held-out split to align predicted risks with actual observed hospital mortality rates.",
                          "tech":  [
                                       "XGBoost",
                                       "Platt Calibration",
@@ -307,10 +307,10 @@
                      {
                          "title":  "Pediatric Immunization Surveillance \u0026 Dropout BI",
                          "tag":  "EPIDEMIOLOGY BI",
-                         "headline":  "Global WUENIC Vaccine Trajectory \u0026 Dropout Suite",
-                         "metricHighlight":  "195 Countries  |  16 Antigens  |  58,080 Fact Cells (2000â€“2023)",
-                         "summary":  "Star-schema Power BI analytics platform and SQLite relational ETL pipeline tracking childhood immunization coverage, DTP1-to-DTP3 retention bottlenecks, and COVID-19 delivery shocks.",
-                         "challenge":  "Global WHO/UNICEF registries are distributed across fragmented wide-format Excel matrices, requiring automated unpivoting and DAX measures to isolate pandemic-era coverage drops.",
+                         "headline":  "Global WHO/UNICEF Childhood Vaccination Tracking",
+                         "metricHighlight":  "195 Countries · 16 Vaccines · 20+ Years of WHO/UNICEF Data",
+                         "summary":  "Designed an end-to-end analytics platform tracking pediatric vaccination coverage across 195 countries from 2000 to 2023. Built a Python ETL pipeline to clean and reshape multi-sheet WHO/UNICEF spreadsheets into a structured SQLite database, connected to an interactive Power BI dashboard tracking completion dropouts.",
+                         "challenge":  "The official global registries were spread across inconsistent, wide-format Excel files with missing regional records. I wrote automated Python scripts to clean and unpivot the data, then authored DAX measures to isolate regional coverage drops during the COVID-19 pandemic.",
                          "tech":  [
                                       "Power BI",
                                       "DAX",
@@ -325,10 +325,10 @@
                      {
                          "title":  "SARS-CoV-2 Genomic Variant Clustering via k-mers",
                          "tag":  "BIOINFORMATICS",
-                         "headline":  "Alignment-Free Viral Clade Discovery",
-                         "metricHighlight":  "~30,000 SARS-CoV-2 Genomes  |  341 k-mer Features  |  Log2 Fold-Change",
-                         "summary":  "Unsupervised genomic clustering of ~30k viral sequences using 1- to 4-mer frequency spectra, PCA dimensionality reduction, MiniBatchKMeans, and XGBoost motif importance.",
-                         "challenge":  "Multiple sequence alignment across tens of thousands of full viral genomes is computationally expensive; k-mer frequency spectra enable rapid alignment-free motif profiling.",
+                         "headline":  "Alignment-Free Sequence Clustering for Viral Genomes",
+                         "metricHighlight":  "~30,000 Complete Viral Genomes · 341 k-mer Features Analyzed",
+                         "summary":  "Developed an alignment-free genomic analysis pipeline to cluster roughly 30,000 SARS-CoV-2 sequences. By extracting oligonucleotide k-mer frequency profiles and combining PCA with MiniBatchKMeans, the system identifies distinct viral clades quickly without requiring slow multiple sequence alignments.",
+                         "challenge":  "Aligning tens of thousands of full-length viral genomes using traditional tools requires prohibitive compute time and memory. Using k-mer frequency spectra allowed rapid, scalable clustering of massive genomic sequences on standard hardware.",
                          "tech":  [
                                       "Scikit-learn",
                                       "PCA",
@@ -343,10 +343,10 @@
                      {
                          "title":  "Real-Time CNN Face Recognition Pipeline",
                          "tag":  "COMPUTER VISION",
-                         "headline":  "Live Video Facial Feature Extraction \u0026 Classification",
-                         "metricHighlight":  "End-to-End Custom Dataset  |  OpenCV + TensorFlow CNN",
-                         "summary":  "Constructed a custom labeled facial dataset, applied OpenCV spatial preprocessing, and trained a convolutional neural network for real-time identity inference on live video streams.",
-                         "challenge":  "Maintaining low-latency frame rates and classification stability under varying ambient lighting and camera angles during live webcam inference.",
+                         "headline":  "Live Video Face Detection \u0026 Identity Classification",
+                         "metricHighlight":  "Custom Labeled Dataset · OpenCV Pipeline · TensorFlow CNN",
+                         "summary":  "Built an end-to-end computer vision system for real-time face detection and recognition from live webcam feeds. Collected and preprocessed a custom facial dataset with OpenCV, then trained a compact convolutional neural network optimized for fast inference on modest hardware.",
+                         "challenge":  "Live video feeds suffer from fluctuating room lighting, motion blur, and slight face angles. I added data augmentation during training (random brightness, rotation, and zooming) and frame-averaging during inference to keep predictions steady.",
                          "tech":  [
                                       "Python",
                                       "TensorFlow",
@@ -360,10 +360,10 @@
                      {
                          "title":  "Cart Crush: Retail \u0026 Financial Inventory ERP",
                          "tag":  "ENTERPRISE SOFTWARE",
-                         "headline":  "Relational Retail Management \u0026 Document Automation",
-                         "metricHighlight":  "C# .NET Framework  |  SQL Server  |  Automated Receipts",
-                         "summary":  "Full-featured retail management platform integrating normalized SQL Server operations, inventory tracking, financial record auditing, and automated email/receipt generation.",
-                         "challenge":  "Ensuring transactional consistency across concurrent inventory updates, billing calculations, and automated receipt dispatch.",
+                         "headline":  "Retail Management, Inventory Tracking \u0026 Invoicing System",
+                         "metricHighlight":  "C# .NET · SQL Server · Automated Invoicing \u0026 Auditing",
+                         "summary":  "Developed a desktop management application in C# .NET and SQL Server for retail stores. Features include multi-user role management, inventory tracking with reorder alerts, transaction processing, receipt generation, and sales auditing reports.",
+                         "challenge":  "Multiple simultaneous sales transactions could cause race conditions in stock counts. Implemented database transactions with ACID-compliant locking in SQL Server and structured form validation to keep stock levels and billing strictly in sync.",
                          "tech":  [
                                       "C#",
                                       ".NET Framework",
@@ -398,30 +398,8 @@
                                        "LaTeX",
                                        "Data Analysis",
                                        "Research Methodology"
-                                   ]
-                    },
-                    {
-                        "company":  "Advanced Machine Intelligence Research Lab (AMIR Lab)",
-                        "location":  "Dhaka, Bangladesh",
-                        "logoIcon":  "fa-solid fa-brain",
-                        "logoBg":  "from-[#253B74] to-[#536DA8]",
-                        "role":  "Research Intern",
-                        "period":  "Jan 2026 - June 2026",
-                        "badges":  [
-                                       "Research Group",
-                                       "Hybrid / Remote",
-                                       "Completed"
                                    ],
-                        "description":  "Executed deep learning research milestones on histopathological lung cancer image classification and generative vision-language transformers for automated medical reporting.",
-                        "skills":  [
-                                       "Deep Learning",
-                                       "PyTorch",
-                                       "TensorFlow",
-                                       "Histopathology",
-                                       "Transformers",
-                                       "Medical Imaging",
-                                       "Academic Writing"
-                                   ]
+                        "logo":  "elite-logo.png"
                     },
                     {
                         "company":  "American International University-Bangladesh (AIUB)",
@@ -441,7 +419,8 @@
                                        "Documentation",
                                        "Database Records",
                                        "Team Coordination"
-                                   ]
+                                   ],
+                        "logo":  "aiub-logo.svg"
                     }
                 ],
     "education":  [
@@ -450,14 +429,16 @@
                           "school":  "American International University-Bangladesh (AIUB)",
                           "period":  "Jan 2026 - Present",
                           "badge":  "CGPA: 3.80 / 4.00",
-                          "focus":  "Specializations: Deep Learning, Explainable AI (XAI), Medical Image Classification, Systems Design \u0026 Advanced Information Architecture."
+                          "focus":  "Specializations: Deep Learning, Explainable AI (XAI), Medical Image Classification, Systems Design \u0026 Advanced Information Architecture.",
+                          "logo":  "aiub-logo.svg"
                       },
                       {
                           "degree":  "Bachelor of Science in Computer Science \u0026 Engineering (B.Sc. CSE)",
                           "school":  "American International University-Bangladesh (AIUB)",
                           "period":  "Jan 2022 - Dec 2025",
                           "badge":  "CGPA: 3.89 / 4.00",
-                          "focus":  "Honors: Academic Scholarship for Excellence \u0026 4x Dean\u0027s List Honors (Spring 2023â€“2024, Fall 2023â€“2024, Spring 2024â€“2025, Fall 2024â€“2025)."
+                          "focus":  "Honors: Academic Scholarship for Excellence \u0026 4x Dean\u0027s List Honors (Spring 2023Ã¢â‚¬â€œ2024, Fall 2023Ã¢â‚¬â€œ2024, Spring 2024Ã¢â‚¬â€œ2025, Fall 2024Ã¢â‚¬â€œ2025).",
+                          "logo":  "aiub-logo.svg"
                       }
                   ],
     "skills":  {

@@ -259,10 +259,10 @@ const PORTFOLIO_DATA = {
       "title": "Fetal Distress Risk Stratification from Cardiotocography",
       "tag": "CLINICAL XAI",
       "category": "xai",
-      "headline": "Explainable 3-Tier Fetal Compromise Triage",
-      "metricHighlight": "0.9854 Macro ROC-AUC  |  93.93% Accuracy  |  2,126 CTG Recordings",
-      "summary": "Explainable three-tier fetal risk stratification (Normal / Suspect / Pathological) from 21 cardiotocography features using class-weighted LightGBM and 5-fold stratified cross-validation.",
-      "challenge": "Clinical CTG cohorts suffer from severe class imbalance (only 8.3% Pathological), where false negatives risk fetal compromise and black-box predictions lack obstetric trust.",
+      "headline": "Cardiotocography Fetal Risk Classification & SHAP Explanations",
+      "metricHighlight": "0.9854 Macro ROC-AUC · 93.93% Accuracy across 2,126 recordings",
+      "summary": "Developed an explainable machine learning model to classify fetal health into Normal, Suspect, or Pathological states using 21 cardiotocography features. Applied class-weighted LightGBM with 5-fold cross-validation and TreeSHAP to make model decisions transparent and clinically interpretable for doctors.",
+      "challenge": "The clinical dataset had severe class imbalance, with only 8.3% pathological cases. Standard classifiers favored the majority class, so I used class weighting and probability threshold tuning to minimize dangerous false negatives without hurting overall specificity.",
       "tech": ["Python", "LightGBM", "TreeSHAP", "Scikit-learn", "Stratified CV", "Pytest"],
       "github": "https://github.com/wahida-binte/fetal-distress-risk-stratification",
       "demo": ""
@@ -272,10 +272,10 @@ const PORTFOLIO_DATA = {
       "title": "AutoVisCheck: Intelligent EDA & Audit Platform",
       "tag": "DATA SYSTEMS",
       "category": "systems",
-      "headline": "Automated EDA & Misleading-Chart Risk Scorer",
-      "metricHighlight": "4-Stage Workflow  |  5 Imputation Engines  |  Replayable Op-Log",
-      "summary": "Interactive Streamlit web application guiding users through cleaning, column-type-aware visualization, automated statistical interpretation, and exportable HTML/Markdown reporting.",
-      "challenge": "Manual exploratory data analysis is prone to irreversible cleaning mistakes and visually deceptive chart configurations (e.g., truncated axes or unnormalized group comparisons).",
+      "headline": "Interactive Exploratory Data Analysis & Chart Validation Tool",
+      "metricHighlight": "4-Stage Guided Workflow · 5 Smart Imputation Modes · Replayable Operation Log",
+      "summary": "Built an interactive Streamlit app that walks users through data cleaning, smart exploratory data analysis, and chart sanity-checking. It automatically detects column data types, suggests appropriate statistical summaries, and flags common visualization flaws like truncated axes before generating exportable reports.",
+      "challenge": "Many exploratory tools either make destructive modifications to raw datasets or generate misleading visualizations. I designed a non-destructive pipeline with a replayable operation history so users can review, audit, or revert every data transformation step.",
       "tech": ["Streamlit", "Plotly", "Pandas", "NumPy", "Pytest", "GitHub Actions CI"],
       "github": "https://github.com/wahida-binte/autovischeck",
       "demo": ""
@@ -285,10 +285,10 @@ const PORTFOLIO_DATA = {
       "title": "Explainable ML for Antimicrobial Resistance (AMR)",
       "tag": "BIOMEDICAL ML",
       "category": "xai",
-      "headline": "Ciprofloxacin Resistance Prediction in E. coli",
-      "metricHighlight": "10,204 Validated Isolates  |  0.7974 ROC-AUC  |  DRIAMS-A Cohort",
-      "summary": "End-to-end clinical machine learning pipeline predicting fluoroquinolone non-susceptibility in Escherichia coli using longitudinal hospital mass-spectra metadata (2015–2018).",
-      "challenge": "Raw clinical susceptibility registries contain 41 co-tested antibiotic outcomes that induce severe shortcut learning if not systematically purged prior to gradient boosting.",
+      "headline": "Predicting Ciprofloxacin Resistance in E. coli",
+      "metricHighlight": "10,204 Clinical Isolates · 0.7974 ROC-AUC · DRIAMS-A Cohort",
+      "summary": "Built a machine learning pipeline to predict ciprofloxacin resistance in E. coli from mass-spectrometry clinical records spanning 2015 to 2018. Used XGBoost and TreeSHAP to identify which laboratory features most strongly signal drug resistance, providing interpretable insights for antibiotic stewardship.",
+      "challenge": "Clinical hospital records often contain co-tested antibiotic results that leak the target label into the feature space. I designed a strict data sanitization step that stripped out target-correlated testing artifacts before training to ensure the model learned genuine biological markers.",
       "tech": ["Python", "XGBoost", "TreeSHAP", "DRIAMS Dataset", "Cost-Sensitive Learning"],
       "github": "https://github.com/wahida-binte",
       "demo": ""
@@ -298,23 +298,23 @@ const PORTFOLIO_DATA = {
       "title": "Sepsis Survival XAI: Calibrated Mortality Benchmark",
       "tag": "CLINICAL CALIBRATION",
       "category": "xai",
-      "headline": "Platt-Calibrated In-Hospital Sepsis Mortality",
-      "metricHighlight": "110,204 Admissions  |  Brier 0.223 → 0.066  |  500x Bootstrap CI",
-      "summary": "Reproducible benchmark predicting in-hospital sepsis mortality from minimal clinical records using imbalance-aware XGBoost, sigmoid calibration, and patient-level SHAP waterfall audit trails.",
-      "challenge": "Standard cost-sensitive boosting (scale_pos_weight) heavily distorts predicted probabilities on 7.35% mortality cohorts, requiring post-hoc Platt scaling on a dedicated validation split.",
+      "headline": "Well-Calibrated Sepsis Mortality Risk Prediction",
+      "metricHighlight": "110,204 Patient Records · Brier Score Reduced from 0.223 to 0.066",
+      "summary": "Created a calibrated risk prediction model to estimate in-hospital sepsis mortality from routine clinical variables. Combined gradient boosting with Platt scaling to deliver reliable risk probabilities rather than raw uncalibrated scores, paired with individual patient SHAP waterfall charts.",
+      "challenge": "Raw boosting models often output extreme, poorly calibrated probability estimates when trained on low-prevalence outcomes (under 8% mortality). I used Platt scaling on a held-out split to align predicted risks with actual observed hospital mortality rates.",
       "tech": ["XGBoost", "Platt Calibration", "SHAP Waterfall", "Bootstrap CIs", "Scikit-learn"],
       "github": "https://github.com/wahida-binte",
       "demo": ""
     },
     {
       "id": "pediatric-bi",
-      "title": "Pediatric Immunization Surveillance & Dropout BI",
+      "title": "Pediatric Immunization Surveillance & Dropout Analytics",
       "tag": "EPIDEMIOLOGY BI",
       "category": "systems",
-      "headline": "Global WUENIC Vaccine Trajectory & Dropout Suite",
-      "metricHighlight": "195 Countries  |  16 Antigens  |  58,080 Fact Cells (2000–2023)",
-      "summary": "Star-schema Power BI analytics platform and SQLite relational ETL pipeline tracking childhood immunization coverage, DTP1-to-DTP3 retention bottlenecks, and COVID-19 delivery shocks.",
-      "challenge": "Global WHO/UNICEF registries are distributed across fragmented wide-format Excel matrices, requiring automated unpivoting and DAX measures to isolate pandemic-era coverage drops.",
+      "headline": "Global WHO/UNICEF Childhood Vaccination Tracking",
+      "metricHighlight": "195 Countries · 16 Vaccines · 20+ Years of WHO/UNICEF Data",
+      "summary": "Designed an end-to-end analytics platform tracking pediatric vaccination coverage across 195 countries from 2000 to 2023. Built a Python ETL pipeline to clean and reshape multi-sheet WHO/UNICEF spreadsheets into a structured SQLite database, connected to an interactive Power BI dashboard tracking completion dropouts.",
+      "challenge": "The official global registries were spread across inconsistent, wide-format Excel files with missing regional records. I wrote automated Python scripts to clean and unpivot the data, then authored DAX measures to isolate regional coverage drops during the COVID-19 pandemic.",
       "tech": ["Power BI", "DAX", "Star Schema", "Python ETL", "SQLite", "Plotly"],
       "github": "https://github.com/wahida-binte/pediatric-immunization-surveillance",
       "demo": ""
@@ -324,10 +324,10 @@ const PORTFOLIO_DATA = {
       "title": "SARS-CoV-2 Genomic Variant Clustering via k-mers",
       "tag": "BIOINFORMATICS",
       "category": "bio",
-      "headline": "Alignment-Free Viral Clade Discovery",
-      "metricHighlight": "~30,000 SARS-CoV-2 Genomes  |  341 k-mer Features  |  Log2 Fold-Change",
-      "summary": "Unsupervised genomic clustering of ~30k viral sequences using 1- to 4-mer frequency spectra, PCA dimensionality reduction, MiniBatchKMeans, and XGBoost motif importance.",
-      "challenge": "Multiple sequence alignment across tens of thousands of full viral genomes is computationally expensive; k-mer frequency spectra enable rapid alignment-free motif profiling.",
+      "headline": "Alignment-Free Sequence Clustering for Viral Genomes",
+      "metricHighlight": "~30,000 Complete Viral Genomes · 341 k-mer Features Analyzed",
+      "summary": "Developed an alignment-free genomic analysis pipeline to cluster roughly 30,000 SARS-CoV-2 sequences. By extracting oligonucleotide k-mer frequency profiles and combining PCA with MiniBatchKMeans, the system identifies distinct viral clades quickly without requiring slow multiple sequence alignments.",
+      "challenge": "Aligning tens of thousands of full-length viral genomes using traditional tools requires prohibitive compute time and memory. Using k-mer frequency spectra allowed rapid, scalable clustering of massive genomic sequences on standard hardware.",
       "tech": ["Scikit-learn", "PCA", "MiniBatchKMeans", "XGBoost", "Genomics", "Python"],
       "github": "https://github.com/wahida-binte",
       "demo": ""
@@ -337,10 +337,10 @@ const PORTFOLIO_DATA = {
       "title": "Real-Time CNN Face Recognition Pipeline",
       "tag": "COMPUTER VISION",
       "category": "cv",
-      "headline": "Live Video Facial Feature Extraction & Classification",
-      "metricHighlight": "End-to-End Custom Dataset  |  OpenCV + TensorFlow CNN",
-      "summary": "Constructed a custom labeled facial dataset, applied OpenCV spatial preprocessing, and trained a convolutional neural network for real-time identity inference on live video streams.",
-      "challenge": "Maintaining low-latency frame rates and classification stability under varying ambient lighting and camera angles during live webcam inference.",
+      "headline": "Live Video Face Detection & Identity Classification",
+      "metricHighlight": "Custom Labeled Dataset · OpenCV Pipeline · TensorFlow CNN",
+      "summary": "Built an end-to-end computer vision system for real-time face detection and recognition from live webcam feeds. Collected and preprocessed a custom facial dataset with OpenCV, then trained a compact convolutional neural network optimized for fast inference on modest hardware.",
+      "challenge": "Live video feeds suffer from fluctuating room lighting, motion blur, and slight face angles. I added data augmentation during training (random brightness, rotation, and zooming) and frame-averaging during inference to keep predictions steady.",
       "tech": ["Python", "TensorFlow", "CNN", "OpenCV", "Real-Time Video"],
       "github": "https://github.com/wahida-binte",
       "demo": ""
@@ -350,10 +350,10 @@ const PORTFOLIO_DATA = {
       "title": "Cart Crush: Retail & Financial Inventory ERP",
       "tag": "ENTERPRISE SOFTWARE",
       "category": "systems",
-      "headline": "Relational Retail Management & Document Automation",
-      "metricHighlight": "C# .NET Framework  |  SQL Server  |  Automated Receipts",
-      "summary": "Full-featured retail management platform integrating normalized SQL Server operations, inventory tracking, financial record auditing, and automated email/receipt generation.",
-      "challenge": "Ensuring transactional consistency across concurrent inventory updates, billing calculations, and automated receipt dispatch.",
+      "headline": "Retail Management, Inventory Tracking & Invoicing System",
+      "metricHighlight": "C# .NET · SQL Server · Automated Invoicing & Auditing",
+      "summary": "Developed a desktop management application in C# .NET and SQL Server for retail stores. Features include multi-user role management, inventory tracking with reorder alerts, transaction processing, receipt generation, and sales auditing reports.",
+      "challenge": "Multiple simultaneous sales transactions could cause race conditions in stock counts. Implemented database transactions with ACID-compliant locking in SQL Server and structured form validation to keep stock levels and billing strictly in sync.",
       "tech": ["C#", ".NET Framework", "SQL Server", "MVC Architecture"],
       "github": "",
       "demo": ""
@@ -363,6 +363,7 @@ const PORTFOLIO_DATA = {
     {
       "company": "ELITE Research Lab LLC",
       "location": "Queens, New York, USA",
+      "logo": "elite-logo.png",
       "logoIcon": "fa-solid fa-layer-group",
       "logoBg": "from-[#253B74] to-[#536DA8]",
       "role": "Research Assistant",
@@ -372,19 +373,9 @@ const PORTFOLIO_DATA = {
       "skills": ["Python", "Machine Learning", "Explainable AI (SHAP)", "Scikit-learn", "Pandas", "NumPy", "Jupyter Notebook", "LaTeX", "Data Analysis", "Research Methodology"]
     },
     {
-      "company": "Advanced Machine Intelligence Research Lab (AMIR Lab)",
-      "location": "Dhaka, Bangladesh",
-      "logoIcon": "fa-solid fa-brain",
-      "logoBg": "from-[#253B74] to-[#536DA8]",
-      "role": "Research Intern",
-      "period": "Jan 2026 – June 2026",
-      "badges": ["Research Group", "Hybrid / Remote", "Completed"],
-      "description": "Executed deep learning research milestones on histopathological lung cancer image classification from stained whole-slide image patches and developed generative vision-language transformer architectures for automated medical diagnostic reporting.",
-      "skills": ["Deep Learning", "PyTorch", "TensorFlow", "Histopathology", "Transformers", "Medical Imaging", "Academic Writing"]
-    },
-    {
       "company": "American International University-Bangladesh (AIUB)",
       "location": "Department of Computer Science, Dhaka, Bangladesh",
+      "logo": "aiub-logo.svg",
       "logoIcon": "fa-solid fa-building-columns",
       "logoBg": "from-[#253B74] to-[#536DA8]",
       "role": "Student Assistant, Intern",
@@ -398,6 +389,7 @@ const PORTFOLIO_DATA = {
     {
       "degree": "Master of Science in Computer Science (M.Sc. CS)",
       "school": "American International University-Bangladesh (AIUB)",
+      "logo": "aiub-logo.svg",
       "period": "Jan 2026 – Present",
       "badge": "CGPA: 3.80 / 4.00",
       "focus": "Specializations: Deep Learning, Explainable AI (XAI), Medical Image Classification, Systems Design & Advanced Information Architecture.",
@@ -406,6 +398,7 @@ const PORTFOLIO_DATA = {
     {
       "degree": "Bachelor of Science in Computer Science & Engineering (B.Sc. CSE)",
       "school": "American International University-Bangladesh (AIUB)",
+      "logo": "aiub-logo.svg",
       "period": "Jan 2022 – Dec 2025",
       "badge": "CGPA: 3.89 / 4.00",
       "focus": "Honors: Academic Scholarship for Excellence & 4x Dean's List Honors (Spring 2023–2024, Fall 2023–2024, Spring 2024–2025, Fall 2024–2025). Graduated in Top Tier of Department.",
@@ -806,17 +799,12 @@ function renderProjectSpotlight(index) {
         </div>
 
         <!-- Metric Highlight Display -->
-        <div class="relative z-10 rounded-xl bg-[#0C1326]/95 border border-[#253B74] p-4 shadow-xl space-y-3 mt-6">
-          <div class="flex items-center justify-between border-b border-[#253B74]/80 pb-2">
-            <div class="flex items-center gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
-            </div>
-            <span class="text-[10px] font-mono text-[#7E85A6]">system_benchmark.json</span>
+        <div class="relative z-10 rounded-xl bg-[#0C1326]/95 border border-[#253B74] p-4 shadow-xl space-y-2.5 mt-6">
+          <div class="text-[10px] font-mono uppercase tracking-widest text-[#8FA4D4] font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-chart-line text-[10px]"></i> KEY HIGHLIGHT &amp; RESULTS:
           </div>
-          <div class="text-xs font-mono font-bold text-[#E8EAF7] bg-[#253B74]/80 border border-[#536DA8]/50 rounded-lg px-3 py-2.5 leading-relaxed">
-            <i class="fa-solid fa-chart-line text-[#8FA4D4] mr-1.5"></i> ${p.metricHighlight}
+          <div class="text-xs font-mono font-medium text-[#E8EAF7] bg-[#253B74]/80 border border-[#536DA8]/50 rounded-lg px-3 py-2.5 leading-relaxed">
+            ${p.metricHighlight}
           </div>
           <div class="flex flex-wrap gap-1.5 pt-1">
             ${p.tech.slice(0, 4).map(t => `<span class="px-2 py-0.5 rounded bg-[#121C38] border border-[#253B74] text-[#D6D9F0] text-[10px] font-mono font-medium">${t}</span>`).join('')}
@@ -938,8 +926,10 @@ function renderJourney(journey) {
     <div class="pro-card rounded-2xl bg-[#121C38] border border-[#253B74] p-6 sm:p-7 space-y-4 hover:border-[#536DA8] transition">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#253B74]/80 pb-4">
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#253B74] to-[#536DA8] border border-[#536DA8]/40 flex items-center justify-center text-[#E8EAF7] text-lg shadow-lg">
-            <i class="${item.logoIcon}"></i>
+          <div class="w-12 h-12 rounded-xl bg-white/95 border border-[#536DA8]/40 flex items-center justify-center p-2 shadow-lg">
+            ${item.logo
+              ? `<img src="${item.logo}" alt="${item.company} logo" class="w-full h-full object-contain">`
+              : `<i class="${item.logoIcon} text-[#253B74] text-lg"></i>`}
           </div>
           <div>
             <h3 class="text-base sm:text-lg font-bold text-[#E8EAF7] tracking-tight">${item.company}</h3>
@@ -981,8 +971,10 @@ function renderEducation(education) {
     <div class="pro-card rounded-2xl bg-[#121C38] border border-[#253B74] p-6 space-y-4 hover:border-[#536DA8] transition">
       <div class="flex items-start justify-between gap-3">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-[#253B74] border border-[#536DA8] flex items-center justify-center text-[#E8EAF7] text-base shadow-sm">
-            <i class="${edu.icon}"></i>
+          <div class="w-10 h-10 rounded-xl bg-white/95 border border-[#536DA8] flex items-center justify-center p-1.5 shadow-sm">
+            ${edu.logo
+              ? `<img src="${edu.logo}" alt="${edu.school} logo" class="w-full h-full object-contain">`
+              : `<i class="${edu.icon} text-[#253B74] text-base"></i>`}
           </div>
           <div>
             <h3 class="text-base sm:text-lg font-bold text-[#E8EAF7] tracking-tight">${edu.degree}</h3>
